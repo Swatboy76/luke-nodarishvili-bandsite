@@ -1,0 +1,24 @@
+/*Default settings is mobile, work around that*/
+$footer-header-colour: #323232;
+$footer-header-colour-text: #FFFFFF;
+
+header {
+    background-color: $footer-header-colour;
+    color: $footer-header-colour-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70%;
+        @media screen and (max-width: 100px) {
+            font-size: large; /*is a test, delete sooner or later*/
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $footer-header-colour-text;
+    }
+}

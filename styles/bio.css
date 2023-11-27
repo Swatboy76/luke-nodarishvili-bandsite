@@ -1,0 +1,23 @@
+/*Default settings is mobile, work around that*/
+header {
+  background-color: #323232;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70%;
+}
+@media screen and (max-width: 100px) {
+  header nav {
+    font-size: large; /*is a test, delete sooner or later*/
+  }
+}
+header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}/*# sourceMappingURL=bio.css.map */
