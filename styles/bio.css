@@ -1,4 +1,8 @@
 /*Default settings is mobile, work around that*/
+body {
+  font-family: avenir next; /*figure out where/how to name this font cause its some weird avon stuff.*/
+}
+
 header {
   background-color: #323232;
   color: #FFFFFF;
@@ -20,4 +24,8 @@ header nav {
 header a {
   text-decoration: none;
   color: #FFFFFF;
+}
+header img {
+  size: 10px 10px;
+  overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
 }/*# sourceMappingURL=bio.css.map */

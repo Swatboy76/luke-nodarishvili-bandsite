@@ -2,6 +2,10 @@
 $footer-header-colour: #323232;
 $footer-header-colour-text: #FFFFFF;
 
+body{
+    font-family:avenir next; /*figure out where/how to name this font cause its some weird avon stuff.*/
+}
+
 header {
     background-color: $footer-header-colour;
     color: $footer-header-colour-text;
@@ -20,5 +24,9 @@ header {
     a{
         text-decoration: none;
         color: $footer-header-colour-text;
+    }
+    img{
+        size: 10px 10px;
+        overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
     }
 }
