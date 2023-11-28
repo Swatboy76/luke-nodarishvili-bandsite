@@ -16,9 +16,9 @@ header nav {
   align-items: center;
   gap: 70%;
 }
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 767px) {
   header nav {
-    font-size: large; /*is a test, delete sooner or later*/
+    font-size: 100px; /*is a test, delete sooner or later*/
   }
 }
 header a {

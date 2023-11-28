@@ -17,8 +17,8 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 70%;
-        @media screen and (max-width: 100px) {
-            font-size: large; /*is a test, delete sooner or later*/
+        @media screen and (max-width: 767px) {
+            font-size: 100px; /*is a test, delete sooner or later*/
         }
     }
     a{
