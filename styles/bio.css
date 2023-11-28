@@ -18,7 +18,7 @@ header nav {
 }
 @media screen and (max-width: 767px) {
   header nav {
-    font-size: 100px; /*is a test, delete sooner or later*/
+    font-size: 14px; /*is a test, delete sooner or later*/
   }
 }
 header a {
@@ -27,5 +27,7 @@ header a {
 }
 header img {
   size: 10px 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
   overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
 }/*# sourceMappingURL=bio.css.map */

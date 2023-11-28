@@ -18,7 +18,7 @@ header {
         align-items: center;
         gap: 70%;
         @media screen and (max-width: 767px) {
-            font-size: 100px; /*is a test, delete sooner or later*/
+            font-size: 14px; /*is a test, delete sooner or later*/
         }
     }
     a{
@@ -27,6 +27,7 @@ header {
     }
     img{
         size: 10px 10px;
+        object-fit: contain;
         overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
     }
 }
