@@ -1,22 +1,25 @@
 /*Default settings is mobile, work around that*/
-$footer-header-colour: #323232;
-$footer-header-colour-text: #FFFFFF;
+
+@use "./partials/variables&fonts.scss" as *;
+@use "./partials/breakpoints.scss" as *;
 
 body{
-    font-family:avenir next; /*figure out where/how to name this font cause its some weird avon stuff.*/
+    font-family:AvenirNext; /*figure out where/how to name this font cause its some weird avon stuff.*/
+    @include smallscreen {
+        background-color: pink;/*finish conversions before you do anything else*/
+    }
 }
 
 header {
     background-color: $footer-header-colour;
     color: $footer-header-colour-text;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /*this code needs to shut down when in desktop mode*/
+    flex-direction: column; /*this code needs to shut down when in desktop mode*/
     .logo{
-        img{
-            width: fit-content;
-            margin: 50px;
-        }   
+        margin-left: auto;
+        margin-right: auto;
+        height: 20px;
+        width: 120px;
     }
     nav{
         display: flex;
@@ -28,7 +31,6 @@ header {
             color: $footer-header-colour-text;
             display: flex;
         }
-        
     }
     img{
         width: 100%;

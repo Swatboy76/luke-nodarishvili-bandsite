@@ -1,19 +1,28 @@
 /*Default settings is mobile, work around that*/
+@font-face {
+  font-family: AvenirNext;
+  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
 body {
-  font-family: avenir next; /*figure out where/how to name this font cause its some weird avon stuff.*/
+  font-family: AvenirNext; /*figure out where/how to name this font cause its some weird avon stuff.*/
+}
+@media screen and (max-width: 767px) {
+  body {
+    background-color: pink; /*finish conversions before you do anything else*/
+  }
 }
 
 header {
   background-color: #323232;
   color: #FFFFFF;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /*this code needs to shut down when in desktop mode*/
+  flex-direction: column; /*this code needs to shut down when in desktop mode*/
 }
-header .logo img {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 50px;
+header .logo {
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 120px;
 }
 header nav {
   display: flex;
