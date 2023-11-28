@@ -11,23 +11,26 @@ header {
     color: $footer-header-colour-text;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center; /*this code needs to shut down when in desktop mode*/
+    .logo{
+        img{
+            width: fit-content;
+            margin: 50px;
+        }   
+    }
     nav{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 70%;
-        @media screen and (max-width: 767px) {
-            font-size: 14px; /*is a test, delete sooner or later*/
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 30px;
+        a{
+            text-decoration: none;
+            color: $footer-header-colour-text;
+            display: flex;
         }
-    }
-    a{
-        text-decoration: none;
-        color: $footer-header-colour-text;
+        
     }
     img{
-        size: 10px 10px;
-        object-fit: contain;
-        overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
+        width: 100%;
     }
 }

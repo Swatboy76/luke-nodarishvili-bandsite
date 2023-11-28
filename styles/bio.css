@@ -8,26 +8,24 @@ header {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /*this code needs to shut down when in desktop mode*/
+}
+header .logo img {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 50px;
 }
 header nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 70%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 30px;
 }
-@media screen and (max-width: 767px) {
-  header nav {
-    font-size: 14px; /*is a test, delete sooner or later*/
-  }
-}
-header a {
+header nav a {
   text-decoration: none;
   color: #FFFFFF;
+  display: flex;
 }
 header img {
-  size: 10px 10px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */
