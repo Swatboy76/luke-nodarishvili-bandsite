@@ -4,37 +4,42 @@
   src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
 }
 body {
-  font-family: AvenirNext; /*figure out where/how to name this font cause its some weird avon stuff.*/
-}
-@media screen and (max-width: 767px) {
-  body {
-    background-color: pink; /*finish conversions before you do anything else*/
-  }
+  font-family: AvenirNext;
 }
 
 header {
   background-color: #323232;
   color: #FFFFFF;
-  display: flex;
-  flex-direction: column; /*this code needs to shut down when in desktop mode*/
 }
-header .logo {
-  margin-left: auto;
-  margin-right: auto;
-  height: 20px;
-  width: 120px;
-}
-header nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 30px;
-}
-header nav a {
-  text-decoration: none;
-  color: #FFFFFF;
-  display: flex;
-}
-header img {
-  width: 100%;
-}/*# sourceMappingURL=bio.css.map */
+/*header {
+    background-color: $footer-header-colour;
+    color: $footer-header-colour-text;
+    display: flex;
+    flex-direction: column; this code needs to shut down when in desktop mode
+    .logo{
+        margin-left: auto;
+        margin-right: auto;
+        height: 20px;
+        width: 120px;
+        @include smallscreen {
+            margin-top: 16px;
+        }
+        @include tabletscreen {
+            margin-top: 36px;
+        }
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 30px;
+        a{
+            text-decoration: none;
+            color: $footer-header-colour-text;
+            display: flex;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}*//*# sourceMappingURL=bio.css.map */

@@ -4,22 +4,40 @@
 @use "./partials/breakpoints.scss" as *;
 
 body{
-    font-family:AvenirNext; /*figure out where/how to name this font cause its some weird avon stuff.*/
-    @include smallscreen {
-        background-color: pink;/*finish conversions before you do anything else*/
-    }
+    font-family:AvenirNext;
 }
 
-header {
+header{
+    background-color: $footer-header-colour;
+    color: $footer-header-colour-text;
+    @include phonescreen {
+
+    }
+    @include tabletscreen{
+
+    }
+    @include computerscreen{
+        
+    }
+
+}
+
+/*header {
     background-color: $footer-header-colour;
     color: $footer-header-colour-text;
     display: flex;
-    flex-direction: column; /*this code needs to shut down when in desktop mode*/
+    flex-direction: column; this code needs to shut down when in desktop mode
     .logo{
         margin-left: auto;
         margin-right: auto;
         height: 20px;
         width: 120px;
+        @include smallscreen {
+            margin-top: 16px;
+        }
+        @include tabletscreen {
+            margin-top: 36px;
+        }
     }
     nav{
         display: flex;
@@ -35,4 +53,4 @@ header {
     img{
         width: 100%;
     }
-}
+}*/
