@@ -1,14 +1,13 @@
 $footer-header-colour: #323232;
-$footer-header-colour-text: #FFFFFF;
+$footer-header-colour-text: #ffffff;
 
-$mobile-margin-16: 16px;
-$mobile-margin-24: 24px;
+$mobile-margin-16: 1rem;
+$mobile-margin-24: 2.5rem;
 
-$tablet-or-computer-margin-36: 36px;
-$tablet-or-computer-margin-48: 48px;
+$tablet-or-computer-margin-36: 2.25rem;
+$tablet-or-computer-margin-48: 3rem;
 
 @font-face {
-    font-family: AvenirNext;
-    src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+  font-family: AvenirNext;
+  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
 }
-

@@ -5,92 +5,92 @@
 While on the train:
     - get the styles for media types done for the top
     - get the images working
-    - use padding and just fuckin full send 50% on the right size for tablet and maybe even pc
-        - or, or!, OR!, have it all flex to the left thus meaning it doesnt change shape or size
+    - use padding and just fuckin full send 50% on the right size for tablet and maybe even pc /
+        - or, or!, OR!, have it all flex to the left thus meaning it doesnt change shape or size //
 */
 @use "./partials/variables&fonts.scss" as *;
 @use "./partials/breakpoints.scss" as *;
 
-body{
-    font-family:AvenirNext;
+body {
+  font-family: AvenirNext;
 }
 
-header{
-    background-color: $footer-header-colour;
-    color: $footer-header-colour-text;
-    @include phonescreen { /*####################################PHONE SCREEN####################################*/
+header {
+  background-color: $footer-header-colour;
+  color: $footer-header-colour-text;
+  @include phonescreen {
+    /*####################################PHONE SCREEN####################################*/
+    display: flex;
+    flex-direction: column;
+    .topbar {
+      display: flex;
+      flex-direction: column;
+      img {
+        margin-top: $mobile-margin-16;
+        margin-bottom: $mobile-margin-16;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+      nav {
         display: flex;
-        flex-direction: column;
-        .topbar{
-            display: flex;
-            flex-direction: column;
-            img{
-                margin-top: $mobile-margin-16;
-                margin-bottom: $mobile-margin-16;
-                margin-left: auto;
-                margin-right: auto;
-                height: 20px;
-                width: 120px;
-            }
-            nav{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                a{
-                    text-decoration: none;
-                    color: $footer-header-colour-text;
-                    width: 50%;
-                    display: flex;
-                    justify-content: space-around;
-                    padding: 16px;
-                }
-                .current-page{
-                    border-bottom: 4px solid white;
-                }
-            }
+        flex-direction: row;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          color: $footer-header-colour-text;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          padding: 1rem;
         }
+        .current-page {
+          border-bottom: 0.25rem solid white;
+        }
+      }
     }
-    @include tabletscreen{ /*####################################TABLET SCREEN####################################*/
+  }
+  @include tabletscreen {
+    /*####################################TABLET SCREEN####################################*/
+    display: flex;
+    flex-direction: column;
+    .topbar {
+      display: flex;
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+      img {
+        margin-top: $mobile-margin-16;
+        margin-bottom: $mobile-margin-16;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+      nav {
         display: flex;
-        flex-direction: column;
-        .topbar{
-            display: flex;
-            flex-direction: row;
-            height: 80px;
-            align-items: center;
-            img{
-                margin-top: $mobile-margin-16;
-                margin-bottom: $mobile-margin-16;
-                margin-left: 40px;
-                margin-right: 80px;
-                height: 20px;
-                width: 120px;
-            }
-            nav{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                a{
-                    text-decoration: none;
-                    color: $footer-header-colour-text;
-                    width: 50%;
-                    display: flex;
-                    justify-content: space-around;
-                    padding: 16px;
-                }
-                .current-page{
-                    border-bottom: 4px solid white;
-                    padding-bottom: 28px;
-                    padding-top: 28px;
-                }
-            }
-        }   
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: $footer-header-colour-text;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          padding: 1rem;
+        }
+        .current-page {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+      }
     }
-    @include computerscreen{
-        
-    }
-
+  }
+  @include computerscreen {
+  }
 }
 
 /*header {
