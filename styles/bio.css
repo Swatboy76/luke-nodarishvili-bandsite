@@ -1,9 +1,13 @@
 /*Default settings is mobile, work around that*/
 /*todo list of things to do:
 - get the image gallery to do the slidly shape changy thing
-    - 
-    - get the styles for media types done for the top
-    - get the images working
+- get the styles for media types done for the top
+- get the images working
+30th:
+ - finish redoing the media styles./
+ - make media styles for PC/
+ - put text over image
+ - get the galery working like in the example
 */
 @font-face {
   font-family: AvenirNext;
@@ -16,82 +20,191 @@ body {
 header {
   background-color: #323232;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /*#################################### TOP BAR ####################################*/
 }
-@media screen and (max-width: 767px) {
-  header {
-    /*####################################PHONE SCREEN####################################*/
-    display: flex;
-    flex-direction: column;
-  }
-  header .topbar {
-    display: flex;
-    flex-direction: column;
-  }
-  header .topbar img {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    height: 1.25rem;
-    width: 7.5rem;
-  }
-  header .topbar nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  header .topbar nav a {
-    text-decoration: none;
-    color: #ffffff;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-  }
-  header .topbar nav .current-page {
-    border-bottom: 0.25rem solid white;
-  }
+header .topbar {
+  display: flex;
+  flex-direction: column;
+  /*#################################### NAV ####################################*/
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header {
-    /*####################################TABLET SCREEN####################################*/
-    display: flex;
-    flex-direction: column;
-  }
   header .topbar {
-    display: flex;
     flex-direction: row;
     height: 5rem;
     align-items: center;
   }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
+}
+header .topbar img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1.25rem;
+  width: 7.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   header .topbar img {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
     margin-left: 2.5rem;
     margin-right: 5rem;
-    height: 1.25rem;
-    width: 7.5rem;
   }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar img {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+  }
+}
+header .topbar nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /*#################################### NAV LINKS ####################################*/
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   header .topbar nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
-  header .topbar nav a {
-    text-decoration: none;
-    color: #ffffff;
-    width: 50%;
+}
+@media screen and (min-width: 1280px) {
+  header .topbar nav {
     display: flex;
-    justify-content: space-around;
-    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
   }
+}
+header .topbar nav a {
+  text-decoration: none;
+  color: #ffffff;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+header .topbar nav .current-page {
+  border-bottom: 0.25rem solid white;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   header .topbar nav .current-page {
     border-bottom: 4px solid white;
     padding-bottom: 1.75rem;
     padding-top: 1.75rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  header .topbar nav .current-page {
+    border-bottom: 4px solid white;
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+  }
+}
+header .picture-title {
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  header .picture-title {
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .picture-title {
+    height: 48vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .picture-title {
+    height: 100vh;
+  }
+}
+
+/*####################################TABLET SCREEN####################################
+  @include tabletscreen {
+    display: flex;
+    flex-direction: column;
+    .topbar {
+      display: flex;
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+      img {
+        margin-top: $tablet-or-computer-margin-36;
+        margin-bottom: $tablet-or-computer-margin-36;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: $footer-header-colour-text;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          padding: 1rem;
+        }
+        .current-page {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+      }
+    }
+  }
+  @include computerscreen {
+    display: flex;
+    flex-direction: column;
+    .topbar {
+      display: flex;
+      flex-direction: column;
+      img {
+        margin-top: $mobile-margin-16;
+        margin-bottom: $mobile-margin-16;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          color: $footer-header-colour-text;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          padding: 1rem;
+        }
+        .current-page {
+          border-bottom: 0.25rem solid white;
+        }
+      }
+    }
+  }
+}*/
 /*header {
     background-color: $footer-header-colour;
     color: $footer-header-colour-text;
@@ -123,4 +236,6 @@ header {
     img{
         width: 100%;
     }
-}*//*# sourceMappingURL=bio.css.map */
+}
+
+*//*# sourceMappingURL=bio.css.map */

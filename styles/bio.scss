@@ -1,9 +1,13 @@
 /*Default settings is mobile, work around that*/
 /*todo list of things to do:
 - get the image gallery to do the slidly shape changy thing
-    - 
-    - get the styles for media types done for the top
-    - get the images working
+- get the styles for media types done for the top
+- get the images working
+30th:
+ - finish redoing the media styles./
+ - make media styles for PC/
+ - put text over image
+ - get the galery working like in the example
 */
 @use "./partials/variables&fonts.scss" as *;
 @use "./partials/breakpoints.scss" as *;
@@ -15,8 +19,138 @@ body {
 header {
   background-color: $footer-header-colour;
   color: $footer-header-colour-text;
-  @include phonescreen {
-    /*####################################PHONE SCREEN####################################*/
+
+  display: flex;
+  flex-direction: column;
+  /*#################################### TOP BAR ####################################*/
+  .topbar {
+    display: flex;
+    flex-direction: column;
+    @include tabletscreen {
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+    }
+    @include computerscreen {
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+    }
+
+    img {
+      margin-top: $mobile-margin-16;
+      margin-bottom: $mobile-margin-16;
+      margin-left: auto;
+      margin-right: auto;
+      @include tabletscreen {
+        margin-top: $tablet-or-computer-margin-36;
+        margin-bottom: $tablet-or-computer-margin-36;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+      }
+      @include computerscreen {
+        margin-top: $tablet-or-computer-margin-36;
+        margin-bottom: $tablet-or-computer-margin-36;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+      }
+      height: 1.25rem;
+      width: 7.5rem;
+    }
+    /*#################################### NAV ####################################*/
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      @include tabletscreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      @include computerscreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      /*#################################### NAV LINKS ####################################*/
+      a {
+        text-decoration: none;
+        color: $footer-header-colour-text;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+      }
+
+      .current-page {
+        border-bottom: 0.25rem solid white;
+        @include tabletscreen {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+        @include computerscreen {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+      }
+    }
+  }
+  .picture-title {
+    background-image: url(../Assets/Images/hero-bio.jpg);
+    background-size: cover;
+    @include phonescreen {
+      height: 30vh;
+    }
+    @include tabletscreen {
+      height: 48vh;
+    }
+    @include computerscreen {
+      height: 100vh;
+    }
+  }
+} /*####################################TABLET SCREEN####################################
+  @include tabletscreen {
+    display: flex;
+    flex-direction: column;
+    .topbar {
+      display: flex;
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+      img {
+        margin-top: $tablet-or-computer-margin-36;
+        margin-bottom: $tablet-or-computer-margin-36;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: $footer-header-colour-text;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          padding: 1rem;
+        }
+        .current-page {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+      }
+    }
+  }
+  @include computerscreen {
     display: flex;
     flex-direction: column;
     .topbar {
@@ -48,47 +182,7 @@ header {
       }
     }
   }
-  @include tabletscreen {
-    /*####################################TABLET SCREEN####################################*/
-    display: flex;
-    flex-direction: column;
-    .topbar {
-      display: flex;
-      flex-direction: row;
-      height: 5rem;
-      align-items: center;
-      img {
-        margin-top: $mobile-margin-16;
-        margin-bottom: $mobile-margin-16;
-        margin-left: 2.5rem;
-        margin-right: 5rem;
-        height: 1.25rem;
-        width: 7.5rem;
-      }
-      nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        a {
-          text-decoration: none;
-          color: $footer-header-colour-text;
-          width: 50%;
-          display: flex;
-          justify-content: space-around;
-          padding: 1rem;
-        }
-        .current-page {
-          border-bottom: 4px solid white;
-          padding-bottom: 1.75rem;
-          padding-top: 1.75rem;
-        }
-      }
-    }
-  }
-  @include computerscreen {
-  }
-}
+}*/
 
 /*header {
     background-color: $footer-header-colour;
@@ -121,4 +215,6 @@ header {
     img{
         width: 100%;
     }
-}*/
+}
+
+*/
