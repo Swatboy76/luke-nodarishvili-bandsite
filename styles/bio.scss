@@ -6,11 +6,11 @@
  - put text over image (almost done!!!!) ✔️
  - get the galery working like in the example (May skip depending on how much i can finish on the train and how much energy i have)
  - pet cat ✔️
+ - get the band photo above the bio complete and formated and all pretty
  1st:
  - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...
    OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)
  - If the galery isnt complete by 30th continue working on it
- - get the band photo above the bio complete and formated and all pretty
  - Confgire the fonts to change size and set all the fonts properly
  - pet cat
  2nd:
@@ -117,7 +117,7 @@ header {
     align-items: center;
     @include phonescreen {
       height: 30vh;
-      padding: 0.5rem; /*mobile format, 8px*/
+      padding: $mobile-margin-16;
     }
     @include tabletscreen {
       height: 48vh;
@@ -126,6 +126,31 @@ header {
     @include computerscreen {
       height: 100vh;
       padding: 10rem; //computer format, no fixed number so i thew in 160px
+    }
+  }
+}
+.photo-gallery {
+  background-color: #fafafa;
+  h1 {
+    padding-top: $mobile-margin-16;
+    padding-left: $mobile-margin-16;
+  }
+  img {
+    padding: $mobile-margin-16;
+    padding-top: 0rem;
+    padding-bottom: $mobile-margin-16;
+    width: 25.125rem; //402px <--------------------------
+
+    margin-left: auto;
+    margin-right: auto;
+    @include phonescreen {
+      display: flex;
+      justify-content: center;
+    }
+    @include tabletscreen {
+      display: flex;
+    }
+    @include computerscreen {
     }
   }
 }

@@ -7,11 +7,11 @@
  - put text over image (almost done!!!!) ✔️
  - get the galery working like in the example (May skip depending on how much i can finish on the train and how much energy i have)
  - pet cat ✔️
+ - get the band photo above the bio complete and formated and all pretty
  1st:
  - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...
    OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)
  - If the galery isnt complete by 30th continue working on it
- - get the band photo above the bio complete and formated and all pretty
  - Confgire the fonts to change size and set all the fonts properly
  - pet cat
  2nd:
@@ -135,7 +135,7 @@ header .picture-title {
 @media screen and (max-width: 767px) {
   header .picture-title {
     height: 30vh;
-    padding: 0.5rem; /*mobile format, 8px*/
+    padding: 1rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -148,5 +148,32 @@ header .picture-title {
   header .picture-title {
     height: 100vh;
     padding: 10rem;
+  }
+}
+
+.photo-gallery {
+  background-color: #fafafa;
+}
+.photo-gallery h1 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+.photo-gallery img {
+  padding: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+  width: 25.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .photo-gallery img {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery img {
+    display: flex;
   }
 }/*# sourceMappingURL=bio.css.map */
