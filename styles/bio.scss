@@ -129,6 +129,19 @@ header {
     }
   }
 }
+
+.musicians-article {
+  img {
+    margin: $mobile-margin-16;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .photo-gallery {
   background-color: #fafafa;
   h1 {
@@ -140,7 +153,6 @@ header {
     padding-top: 0rem;
     padding-bottom: $mobile-margin-16;
     width: 25.125rem; //402px <--------------------------
-
     margin-left: auto;
     margin-right: auto;
     @include phonescreen {
@@ -148,9 +160,47 @@ header {
       justify-content: center;
     }
     @include tabletscreen {
-      display: flex;
+      width: 13.12rem;
     }
     @include computerscreen {
+      width: 20rem;
     }
   }
 }
+//what i could do is have lots of divs in the 3x3 format, having it like the below psudeocode:
+/*
+div
+  div backround image
+  div backround image
+  div backround image
+and then repeat this three times using a flex... one of the flexes to make all three rows happy and yappy, Most likely id use a
+list here because its so much stuff and tis all in a un-ordered list anyway. yes i will use a list.
+section
+  li
+    img
+    img
+    img
+section
+  li
+    img
+    img
+    img
+section
+  li
+    img
+    img
+    img
+
+SASS:
+section
+  padding
+  margin auto
+  img:
+   image size
+  tablet styling:
+    display flex
+    row ordering
+    align content center or somthin
+    image size
+
+*/

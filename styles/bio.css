@@ -151,6 +151,17 @@ header .picture-title {
   }
 }
 
+.musicians-article img {
+  margin: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .photo-gallery {
   background-color: #fafafa;
 }
@@ -174,6 +185,48 @@ header .picture-title {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery img {
-    display: flex;
+    width: 13.12rem;
   }
-}/*# sourceMappingURL=bio.css.map */
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery img {
+    width: 20rem;
+  }
+}
+
+/*
+div
+  div backround image
+  div backround image
+  div backround image
+and then repeat this three times using a flex... one of the flexes to make all three rows happy and yappy, Most likely id use a
+list here because its so much stuff and tis all in a un-ordered list anyway. yes i will use a list.
+section
+  li
+    img
+    img
+    img
+section
+  li
+    img
+    img
+    img
+section
+  li
+    img
+    img
+    img
+
+SASS:
+section
+  padding
+  margin auto
+  img:
+   image size
+  tablet styling:
+    display flex
+    row ordering
+    align content center or somthin
+    image size
+
+*//*# sourceMappingURL=bio.css.map */
