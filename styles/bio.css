@@ -1,12 +1,9 @@
 /*Default settings is mobile, work around that*/
 /*todo list of things to do:
 - get the image gallery to do the slidly shape changy thing
-- confim that indeed 
-While on the train:
+    - 
     - get the styles for media types done for the top
     - get the images working
-    - use padding and just fuckin full send 50% on the right size for tablet and maybe even pc /
-        - or, or!, OR!, have it all flex to the left thus meaning it doesnt change shape or size //
 */
 @font-face {
   font-family: AvenirNext;
