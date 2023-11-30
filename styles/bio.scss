@@ -1,13 +1,24 @@
 /*Default settings is mobile, work around that*/
-/*todo list of things to do:
-- get the image gallery to do the slidly shape changy thing
-- get the styles for media types done for the top
-- get the images working
+/*todo list of things to do: (woah a checkmark!>✔️)
 30th:
- - finish redoing the media styles./
- - make media styles for PC/
- - put text over image
- - get the galery working like in the example
+ - finish redoing the media styles.✔️
+ - make media styles for PC✔️
+ - put text over image (almost done!!!!) ✔️
+ - get the galery working like in the example (May skip depending on how much i can finish on the train and how much energy i have)
+ - pet cat ✔️
+ 1st:
+ - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...
+   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)
+ - If the galery isnt complete by 30th continue working on it
+ - get the band photo above the bio complete and formated and all pretty
+ - Confgire the fonts to change size and set all the fonts properly
+ - pet cat
+ 2nd:
+ - start footer
+ - ????
+ - finish footer
+ - pet cat
+ - proffit
 */
 @use "./partials/variables&fonts.scss" as *;
 @use "./partials/breakpoints.scss" as *;
@@ -102,119 +113,19 @@ header {
   .picture-title {
     background-image: url(../Assets/Images/hero-bio.jpg);
     background-size: cover;
+    display: flex;
+    align-items: center;
     @include phonescreen {
       height: 30vh;
+      padding: 0.5rem; /*mobile format, 8px*/
     }
     @include tabletscreen {
       height: 48vh;
+      padding: $tablet-or-computer-margin-48;
     }
     @include computerscreen {
       height: 100vh;
+      padding: 10rem; //computer format, no fixed number so i thew in 160px
     }
   }
-} /*####################################TABLET SCREEN####################################
-  @include tabletscreen {
-    display: flex;
-    flex-direction: column;
-    .topbar {
-      display: flex;
-      flex-direction: row;
-      height: 5rem;
-      align-items: center;
-      img {
-        margin-top: $tablet-or-computer-margin-36;
-        margin-bottom: $tablet-or-computer-margin-36;
-        margin-left: 2.5rem;
-        margin-right: 5rem;
-        height: 1.25rem;
-        width: 7.5rem;
-      }
-      nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        a {
-          text-decoration: none;
-          color: $footer-header-colour-text;
-          width: 50%;
-          display: flex;
-          justify-content: space-around;
-          padding: 1rem;
-        }
-        .current-page {
-          border-bottom: 4px solid white;
-          padding-bottom: 1.75rem;
-          padding-top: 1.75rem;
-        }
-      }
-    }
-  }
-  @include computerscreen {
-    display: flex;
-    flex-direction: column;
-    .topbar {
-      display: flex;
-      flex-direction: column;
-      img {
-        margin-top: $mobile-margin-16;
-        margin-bottom: $mobile-margin-16;
-        margin-left: auto;
-        margin-right: auto;
-        height: 1.25rem;
-        width: 7.5rem;
-      }
-      nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        a {
-          text-decoration: none;
-          color: $footer-header-colour-text;
-          width: 50%;
-          display: flex;
-          justify-content: space-around;
-          padding: 1rem;
-        }
-        .current-page {
-          border-bottom: 0.25rem solid white;
-        }
-      }
-    }
-  }
-}*/
-
-/*header {
-    background-color: $footer-header-colour;
-    color: $footer-header-colour-text;
-    display: flex;
-    flex-direction: column; this code needs to shut down when in desktop mode
-    .logo{
-        margin-left: auto;
-        margin-right: auto;
-        height: 20px;
-        width: 120px;
-        @include smallscreen {
-            margin-top: 16px;
-        }
-        @include tabletscreen {
-            margin-top: 36px;
-        }
-    }
-    nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 30px;
-        a{
-            text-decoration: none;
-            color: $footer-header-colour-text;
-            display: flex;
-        }
-    }
-    img{
-        width: 100%;
-    }
 }
-
-*/
