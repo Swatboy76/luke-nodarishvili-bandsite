@@ -11,23 +11,28 @@
     <header>
       <div class="topbar">
         <img
-          class="logo"
+          class="topbar__img"
           src="./Assets/Logo/Logo-bandsite.svg"
           alt="Bandsite"
         />
-        <nav>
-          <a class="current-page" href="#">Biography</a>
-          <a href="#">Shows</a>
+        <nav class="topbar__nav">
+          <a class="topbar__link topbar__link--current-page" href="#">Biography</a>
+          <a class="topbar__link" "#">Shows</a>
         </nav>
       </div>
+      <section>
       <div class="picture-title">
-        <h1>The Bees Knees</h1>
-      </div>
+          <h1>The Bees Knees</h1>
+        </div>
+        <div class="overlay"></div>
+        </section>
+
+        <!-- use position absolute and place overlay div behind the h1   -->
     </header>
 
     <article class="musicians-article">
       <h1>About the musicians</h1>
-      <img src="./Assets/Images/band.jpg" alt="Band playing at consert" />
+      <img class="musicians-article__img" src="./Assets/Images/band.jpg" alt="Band playing at consert" />
       <h2>
         "We push each other to be the best. It’s not uncommon for one of us to
         say ‘this needs to be better, back to the drawing board’” - Bryan Teddy,
@@ -54,8 +59,8 @@
       </p>
     </article>
 
-    <!--<section class="photo-gallery">
-      <h1>Photo Gallery</h1>
+    <h1>Photo Gallery</h1>
+    <section class="photo-gallery">
       <img src="./Assets/Images/Photo-gallery-1.jpg" alt="#" />
       <img src="./Assets/Images/Photo-gallery-2.jpg" alt="#" />
       <img src="./Assets/Images/Photo-gallery-3.jpg" alt="#" />
@@ -67,6 +72,6 @@
       <img src="./Assets/Images/Photo-gallery-7.jpg" alt="#" />
       <img src="./Assets/Images/Photo-gallery-8.jpg" alt="#" />
       <img src="./Assets/Images/Photo-gallery-9.jpg" alt="#" />
-    </section>-->
+    </section>
   </body>
 </html>

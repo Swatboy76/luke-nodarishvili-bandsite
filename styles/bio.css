@@ -9,10 +9,11 @@
  - pet cat ✔️
  - get the band photo above the bio complete and formated and all pretty
  1st:
- - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...
-   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)
- - If the galery isnt complete by 30th continue working on it
- - Confgire the fonts to change size and set all the fonts properly
+ - Ask the staff for how BEM works/how to implement it✔️
+ - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
+   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
+ - If the galery isnt complete by 30th continue working on it✔️
+ - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!
  - pet cat
  2nd:
  - start footer
@@ -28,6 +29,10 @@
 body {
   font-family: AvenirNext;
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 header {
@@ -56,7 +61,7 @@ header .topbar {
     align-items: center;
   }
 }
-header .topbar img {
+header .topbar__img {
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: auto;
@@ -65,7 +70,7 @@ header .topbar img {
   width: 7.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar img {
+  header .topbar__img {
     margin-top: 2.25rem;
     margin-bottom: 2.25rem;
     margin-left: 2.5rem;
@@ -73,21 +78,21 @@ header .topbar img {
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar img {
+  header .topbar__img {
     margin-top: 2.25rem;
     margin-bottom: 2.25rem;
     margin-left: 2.5rem;
     margin-right: 5rem;
   }
 }
-header .topbar nav {
+header .topbar__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   /*#################################### NAV LINKS ####################################*/
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar nav {
+  header .topbar__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -95,14 +100,14 @@ header .topbar nav {
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar nav {
+  header .topbar__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
 }
-header .topbar nav a {
+header .topbar__link {
   text-decoration: none;
   color: #ffffff;
   width: 50%;
@@ -110,18 +115,18 @@ header .topbar nav a {
   justify-content: space-around;
   padding: 1rem;
 }
-header .topbar nav .current-page {
+header .topbar__link--current-page {
   border-bottom: 0.25rem solid white;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar nav .current-page {
+  header .topbar__link--current-page {
     border-bottom: 4px solid white;
     padding-bottom: 1.75rem;
     padding-top: 1.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar nav .current-page {
+  header .topbar__link--current-page {
     border-bottom: 4px solid white;
     padding-bottom: 1.75rem;
     padding-top: 1.75rem;
@@ -132,6 +137,7 @@ header .picture-title {
   background-size: cover;
   display: flex;
   align-items: center;
+  opacity: 60%;
 }
 @media screen and (max-width: 767px) {
   header .picture-title {
@@ -147,28 +153,42 @@ header .picture-title {
 }
 @media screen and (min-width: 1280px) {
   header .picture-title {
-    height: 100vh;
+    height: 48vh;
     padding: 10rem;
   }
 }
 
-.musicians-article img {
+.musicians-article {
+  margin: 1rem;
+}
+.musicians-article__img {
   margin: 1rem;
   -o-object-fit: contain;
      object-fit: contain;
-  width: 100%;
+  width: 96%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .musicians-article img {
-    margin: 1rem;
+  .musicians-article__img {
+    width: 78%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .musicians-article__img {
+    margin-left: 122px;
+    margin-right: 122px;
+    width: 78%;
+  }
+}
+
 .photo-gallery {
   background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .photo-gallery h1 {
   padding-top: 1rem;
@@ -176,11 +196,7 @@ header .picture-title {
 }
 .photo-gallery img {
   padding: 1rem;
-  padding-top: 0rem;
-  padding-bottom: 1rem;
-  width: 25.125rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .photo-gallery img {
@@ -190,12 +206,16 @@ header .picture-title {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery img {
-    width: 13.12rem;
+    width: 28%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1280px) {
   .photo-gallery img {
-    width: 20rem;
+    width: 28%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 

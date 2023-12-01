@@ -8,10 +8,11 @@
  - pet cat ✔️
  - get the band photo above the bio complete and formated and all pretty
  1st:
- - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...
-   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)
- - If the galery isnt complete by 30th continue working on it
- - Confgire the fonts to change size and set all the fonts properly
+ - Ask the staff for how BEM works/how to implement it✔️
+ - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
+   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
+ - If the galery isnt complete by 30th continue working on it✔️
+ - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!
  - pet cat
  2nd:
  - start footer
@@ -25,9 +26,11 @@
 
 body {
   font-family: AvenirNext;
-  margin: 0;
+  margin: 0; //ask how to make this less important so that it can be overridden
 }
-
+* {
+  box-sizing: border-box;
+}
 header {
   background-color: $footer-header-colour;
   color: $footer-header-colour-text;
@@ -48,8 +51,7 @@ header {
       height: 5rem;
       align-items: center;
     }
-
-    img {
+    &__img {
       margin-top: $mobile-margin-16;
       margin-bottom: $mobile-margin-16;
       margin-left: auto;
@@ -70,7 +72,7 @@ header {
       width: 7.5rem;
     }
     /*#################################### NAV ####################################*/
-    nav {
+    &__nav {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -87,16 +89,15 @@ header {
         align-items: center;
       }
       /*#################################### NAV LINKS ####################################*/
-      a {
-        text-decoration: none;
-        color: $footer-header-colour-text;
-        width: 50%;
-        display: flex;
-        justify-content: space-around;
-        padding: 1rem;
-      }
-
-      .current-page {
+    }
+    &__link {
+      text-decoration: none;
+      color: $footer-header-colour-text;
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      &--current-page {
         border-bottom: 0.25rem solid white;
         @include tabletscreen {
           border-bottom: 4px solid white;
@@ -116,6 +117,7 @@ header {
     background-size: cover;
     display: flex;
     align-items: center;
+    opacity: 60%;
     @include phonescreen {
       height: 30vh;
       padding: $mobile-margin-16;
@@ -125,51 +127,61 @@ header {
       padding: $tablet-or-computer-margin-48;
     }
     @include computerscreen {
-      height: 100vh;
+      height: 48vh;
       padding: 10rem; //computer format, no fixed number so i thew in 160px
     }
   }
 }
 
 .musicians-article {
-  img {
+  margin: 1rem;
+  &__img {
     margin: $mobile-margin-16;
     object-fit: contain;
-    width: 100%;
+    width: 96%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     @include tabletscreen {
-      margin: $mobile-margin-16;
+      //margin: 122px;
+      width: 78%;
     }
     @include computerscreen {
+      margin-left: 122px;
+      margin-right: 122px;
+      width: 78%;
     }
   }
 }
 
 .photo-gallery {
   background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   h1 {
     padding-top: $mobile-margin-16;
     padding-left: $mobile-margin-16;
   }
   img {
     padding: $mobile-margin-16;
-    padding-top: 0rem;
-    padding-bottom: $mobile-margin-16;
-    width: 25.125rem; //402px <--------------------------
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%; //402px <--------------------------
+    // margin-left: auto;
+    //margin-right: auto;
     @include phonescreen {
       display: flex;
       justify-content: center;
     }
     @include tabletscreen {
-      width: 13.12rem;
+      width: 28%;
+      display: flex;
+      flex-wrap: wrap;
     }
     @include computerscreen {
-      width: 20rem;
+      width: 28%;
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
