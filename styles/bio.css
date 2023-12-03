@@ -1,31 +1,513 @@
+@charset "UTF-8";
 /*Default settings is mobile, work around that*/
+/*todo list of things to do: (woah a checkmark!>✔️)
+30th:
+ - finish redoing the media styles.✔️
+ - make media styles for PC✔️
+ - put text over image (almost done!!!!) ✔️
+ - get the galery working like in the example (May skip depending on how much i can finish on the train and how much energy i have)
+ - pet cat ✔️
+ - get the band photo above the bio complete and formated and all pretty
+ 1st:
+ - Ask the staff for how BEM works/how to implement it✔️
+ - YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
+   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
+ - If the galery isnt complete by 30th continue working on it✔️
+ - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!✔️ (Done to unsatisfacory level imo)
+ - pet cat✔️
+ 2nd:
+ - start footer
+ - ????
+ - finish footer
+ - pet cat
+ - proffit
+*/
+@font-face {
+  font-family: avenir-Next-Reg;
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: avenir-Next-Bold;
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: avenir-Next-Demi;
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
+}
 body {
-  font-family: avenir next; /*figure out where/how to name this font cause its some weird avon stuff.*/
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  body h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 0.813rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  body h1 {
+    font-size: 4.5rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body h1 {
+    font-size: 6rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
 }
 
 header {
   background-color: #323232;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*#################################### TOP BAR ####################################*/
 }
-header nav {
+header .topbar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 70%;
+  /*#################################### NAV ####################################*/
 }
-@media screen and (max-width: 767px) {
-  header nav {
-    font-size: 100px; /*is a test, delete sooner or later*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
   }
 }
-header a {
-  text-decoration: none;
-  color: #FFFFFF;
+@media screen and (min-width: 1280px) {
+  header .topbar {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
 }
-header img {
-  size: 10px 10px;
-  overflow: hidden; /*Check image manuptulation stuff on MDN. otherwise pester argen again*/
-}/*# sourceMappingURL=bio.css.map */
+header .topbar__picture {
+  position: relative;
+}
+header .topbar__picture h1 {
+  position: absolute;
+  top: 34%;
+  left: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__picture h1 {
+    left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__picture h1 {
+    left: 8rem;
+  }
+}
+header .topbar__img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1.25rem;
+  width: 7.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__img {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__img {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+  }
+}
+header .topbar__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /*#################################### NAV LINKS ####################################*/
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+header .topbar__link {
+  text-decoration: none;
+  color: #ffffff;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+header .topbar__link--current-page {
+  border-bottom: 0.25rem solid white;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__link--current-page {
+    border-bottom: 4px solid white;
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__link--current-page {
+    border-bottom: 4px solid white;
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+  }
+}
+header .picture-title {
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  opacity: 60%;
+}
+@media screen and (max-width: 767px) {
+  header .picture-title {
+    height: 30vh;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .picture-title {
+    height: 48vh;
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .picture-title {
+    height: 48vh;
+    padding: 10rem;
+  }
+}
+
+.musicians-article {
+  margin: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians-article {
+    margin-left: 7.625rem;
+    margin-right: 7.625rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musicians-article {
+    margin-left: 7.625rem;
+    margin-right: 7.625rem;
+  }
+}
+.musicians-article__img {
+  margin: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1280px) {
+  .musicians-article__img {
+    margin-left: 122px;
+    margin-right: 122px;
+    width: 78%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians-article__paragraph {
+    display: flex;
+  }
+  .musicians-article__paragraph__text {
+    display: flex;
+    margin: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musicians-article__paragraph {
+    display: flex;
+  }
+  .musicians-article__paragraph__text {
+    display: flex;
+    margin: 1rem;
+  }
+}
+
+.photo-gallery {
+  background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo-gallery__heading {
+  padding-left: 1rem;
+}
+.photo-gallery__images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.photo-gallery img {
+  margin: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .photo-gallery img {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery img {
+    width: 28%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery img {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+.footer__socials img {
+  width: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.footer__body-details {
+  margin: 2rem 0;
+}
+.footer__body-details--name h3 {
+  margin: 0;
+}
+.footer__body-details--address {
+  margin: 1rem 0;
+}
+.footer__body-details--address p {
+  margin: 0;
+}
+.footer__logo {
+  width: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo--widescreen {
+    display: none;
+  }
+}
+
+/*
+div
+  div backround image
+  div backround image
+  div backround image
+and then repeat this three times using a flex... one of the flexes to make all three rows happy and yappy, Most likely id use a
+list here because its so much stuff and tis all in a un-ordered list anyway. yes i will use a list.
+section
+  li
+    img
+    img
+    img
+section
+  li
+    img
+    img
+    img
+section
+  li
+    img
+    img
+    img
+
+SASS:
+section
+  padding
+  margin auto
+  img:
+   image size
+  tablet styling:
+    display flex
+    row ordering
+    align content center or somthin
+    image size
+
+*//*# sourceMappingURL=bio.css.map */
