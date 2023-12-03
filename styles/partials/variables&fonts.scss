@@ -8,6 +8,14 @@ $tablet-or-computer-margin-36: 2.25rem;
 $tablet-or-computer-margin-48: 3rem;
 
 @font-face {
-  font-family: AvenirNext;
-  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+  font-family: avenir-Next-Reg;
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: avenir-Next-Bold;
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: avenir-Next-Demi;
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
 }

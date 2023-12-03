@@ -13,8 +13,8 @@
  - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
    OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
  - If the galery isnt complete by 30th continue working on it✔️
- - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!
- - pet cat
+ - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!✔️ (Done to unsatisfacory level imo)
+ - pet cat✔️
  2nd:
  - start footer
  - ????
@@ -23,16 +23,136 @@
  - proffit
 */
 @font-face {
-  font-family: AvenirNext;
-  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+  font-family: avenir-Next-Reg;
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: avenir-Next-Bold;
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: avenir-Next-Demi;
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
 }
 body {
-  font-family: AvenirNext;
   margin: 0;
 }
-
-* {
-  box-sizing: border-box;
+@media screen and (max-width: 767px) {
+  body h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 0.813rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  body h1 {
+    font-size: 6rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body h1 {
+    font-size: 6rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
 }
 
 header {
@@ -158,8 +278,12 @@ header .picture-title {
   }
 }
 
-.musicians-article {
-  margin: 1rem;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians-article {
+    margin: 1rem;
+    margin-left: 7.625rem;
+    margin-right: 7.625rem;
+  }
 }
 .musicians-article__img {
   margin: 1rem;
@@ -171,16 +295,29 @@ header .picture-title {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .musicians-article__img {
-    width: 78%;
-  }
-}
 @media screen and (min-width: 1280px) {
   .musicians-article__img {
     margin-left: 122px;
     margin-right: 122px;
     width: 78%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians-article__paragraph {
+    display: flex;
+  }
+  .musicians-article__paragraph__text {
+    display: flex;
+    margin: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musicians-article__paragraph {
+    display: flex;
+  }
+  .musicians-article__paragraph__text {
+    display: flex;
+    margin: 1rem;
   }
 }
 
@@ -191,29 +328,30 @@ header .picture-title {
   justify-content: center;
 }
 .photo-gallery h1 {
+  display: flex;
   padding-top: 1rem;
   padding-left: 1rem;
 }
-.photo-gallery img {
+.photo-gallery__img {
   padding: 1rem;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
-  .photo-gallery img {
+  .photo-gallery__img {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallery img {
+  .photo-gallery__img {
     width: 28%;
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1280px) {
-  .photo-gallery img {
-    width: 28%;
+  .photo-gallery__img {
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
   }
