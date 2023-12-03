@@ -181,6 +181,24 @@ header .topbar {
     align-items: center;
   }
 }
+header .topbar__picture {
+  position: relative;
+}
+header .topbar__picture h1 {
+  position: absolute;
+  top: 34%;
+  left: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__picture h1 {
+    left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__picture h1 {
+    left: 8rem;
+  }
+}
 header .topbar__img {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -364,6 +382,96 @@ header .picture-title {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+.footer__socials img {
+  width: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.footer__body-details {
+  margin: 2rem 0;
+}
+.footer__body-details--name h3 {
+  margin: 0;
+}
+.footer__body-details--address {
+  margin: 1rem 0;
+}
+.footer__body-details--address p {
+  margin: 0;
+}
+.footer__logo {
+  width: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo--widescreen {
+    display: none;
   }
 }
 

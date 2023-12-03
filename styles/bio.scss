@@ -164,6 +164,20 @@ header {
       height: 5rem;
       align-items: center;
     }
+    &__picture {
+      position: relative;
+      h1 {
+        position: absolute;
+        top: 34%;
+        left: 1rem;
+        @include tabletscreen {
+          left: 2rem;
+        }
+        @include computerscreen {
+          left: 8rem;
+        }
+      }
+    }
     &__img {
       margin-top: $mobile-margin-16;
       margin-bottom: $mobile-margin-16;
@@ -324,6 +338,89 @@ header {
     }
   }
 }
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+  &__header {
+    @include tabletscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include computerscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--left {
+      @include phonescreen {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      @include tabletscreen {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+      @include computerscreen {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    img {
+      width: 30px;
+    }
+  }
+  &__body {
+    @include tabletscreen {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+    }
+    @include computerscreen {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+    }
+    &-details {
+      margin: 2rem 0;
+      &--name {
+        h3 {
+          margin: 0;
+        }
+      }
+      &--address {
+        margin: 1rem 0;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__logo {
+    width: 120px;
+    &--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;
+      }
+    }
+  }
+}
+
 //what i could do is have lots of divs in the 3x3 format, having it like the below psudeocode:
 /*
 div
