@@ -1,26 +1,3 @@
-/*Default settings is mobile, work around that*/
-/*todo list of things to do: (woah a checkmark!>✔️)
-30th:
- - finish redoing the media styles.✔️
- - make media styles for PC✔️
- - put text over image (almost done!!!!) ✔️
- - get the galery working like in the example (May skip depending on how much i can finish on the train and how much energy i have)
- - pet cat ✔️
- - get the band photo above the bio complete and formated and all pretty
- 1st:
- - Ask the staff for how BEM works/how to implement it✔️
- - YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
-   OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
- - If the galery isnt complete by 30th continue working on it✔️
- - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!✔️ (Done to unsatisfacory level imo)
- - pet cat✔️
- 2nd:
- - start footer
- - ????
- - finish footer
- - pet cat
- - proffit
-*/
 @use "./partials/variables&fonts.scss" as *;
 @use "./partials/breakpoints.scss" as *;
 
@@ -36,7 +13,7 @@ body {
     h2 {
       font-size: 1.5rem;
       line-height: 2rem;
-      font-weight: demi 600; //get this working
+      font-weight: 600; //get this working
       font-family: avenir-Next-Reg;
     }
     h3 {
@@ -420,41 +397,3 @@ header {
     }
   }
 }
-
-//what i could do is have lots of divs in the 3x3 format, having it like the below psudeocode:
-/*
-div
-  div backround image
-  div backround image
-  div backround image
-and then repeat this three times using a flex... one of the flexes to make all three rows happy and yappy, Most likely id use a
-list here because its so much stuff and tis all in a un-ordered list anyway. yes i will use a list.
-section
-  li
-    img
-    img
-    img
-section
-  li
-    img
-    img
-    img
-section
-  li
-    img
-    img
-    img
-
-SASS:
-section
-  padding
-  margin auto
-  img:
-   image size
-  tablet styling:
-    display flex
-    row ordering
-    align content center or somthin
-    image size
-
-*/
