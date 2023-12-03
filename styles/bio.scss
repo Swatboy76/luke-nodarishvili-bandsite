@@ -9,7 +9,7 @@
  - get the band photo above the bio complete and formated and all pretty
  1st:
  - Ask the staff for how BEM works/how to implement it✔️
- - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
+ - YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
    OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
  - If the galery isnt complete by 30th continue working on it✔️
  - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!✔️ (Done to unsatisfacory level imo)
@@ -46,7 +46,7 @@ body {
       font-family: avenir-Next-Demi;
     }
     p {
-      font-size: 0.813rem;
+      font-size: 1rem;
       line-height: 1.125rem;
       font-weight: 400;
       font-family: avenir-Next-Reg;
@@ -67,7 +67,7 @@ body {
   }
   @include tabletscreen {
     h1 {
-      font-size: 6rem;
+      font-size: 4.5rem;
       line-height: 4.25rem;
       font-weight: 700;
       font-family: avenir-Next-Bold;
@@ -85,7 +85,7 @@ body {
       font-family: avenir-Next-Demi;
     }
     p {
-      font-size: 0.875rem;
+      font-size: 1rem;
       line-height: 1.375rem;
       font-weight: 400;
       font-family: avenir-Next-Reg;
@@ -124,7 +124,7 @@ body {
       font-family: avenir-Next-Demi;
     }
     p {
-      font-size: 0.875rem;
+      font-size: 1rem;
       line-height: 1.375rem;
       font-weight: 400;
       font-family: avenir-Next-Reg;
@@ -247,16 +247,19 @@ header {
 }
 
 .musicians-article {
-  //1 rem margin whole tyhinbg
+  margin: 1rem;
   @include tabletscreen {
-    margin: 1rem;
+    margin-left: 7.625rem;
+    margin-right: 7.625rem;
+  }
+  @include computerscreen {
     margin-left: 7.625rem;
     margin-right: 7.625rem;
   }
   &__img {
     margin: $mobile-margin-16;
     object-fit: contain;
-    width: 96%;
+    width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -293,19 +296,19 @@ header {
   background-color: #fafafa;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  h1 {
-    display: flex;
-    padding-top: $mobile-margin-16;
+  &__heading {
     padding-left: $mobile-margin-16;
   }
-  &__img {
+  &__images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  img {
     //talk to argen about this
-    padding: $mobile-margin-16;
-    width: 100%; //402px <--------------------------
-    // margin-left: auto;
-    //margin-right: auto;
+    margin: 1rem;
     @include phonescreen {
+      width: 96%;
       display: flex;
       justify-content: center;
     }

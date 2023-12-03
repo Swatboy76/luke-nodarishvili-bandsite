@@ -10,7 +10,7 @@
  - get the band photo above the bio complete and formated and all pretty
  1st:
  - Ask the staff for how BEM works/how to implement it✔️
- - FUCK YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
+ - YOU DIDNT USE THE VARIABLES, GO THOUGH AND MATH THE REMS FOR HOW BIG THE MARGIN IS...✔️ (Can skip!!!)
    OR ASK IF ITS OKAY TO DROP THE VARIABLE MARGINS (IT MIGHT NOT)✔️
  - If the galery isnt complete by 30th continue working on it✔️
  - Confgire the fonts to change size and set all the fonts properly <--------- FINISH THIS!!!!✔️ (Done to unsatisfacory level imo)
@@ -57,7 +57,7 @@ body {
     font-family: avenir-Next-Demi;
   }
   body p {
-    font-size: 0.813rem;
+    font-size: 1rem;
     line-height: 1.125rem;
     font-weight: 400;
     font-family: avenir-Next-Reg;
@@ -78,7 +78,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   body h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
     line-height: 4.25rem;
     font-weight: 700;
     font-family: avenir-Next-Bold;
@@ -96,7 +96,7 @@ body {
     font-family: avenir-Next-Demi;
   }
   body p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 400;
     font-family: avenir-Next-Reg;
@@ -135,7 +135,7 @@ body {
     font-family: avenir-Next-Demi;
   }
   body p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 400;
     font-family: avenir-Next-Reg;
@@ -278,9 +278,17 @@ header .picture-title {
   }
 }
 
+.musicians-article {
+  margin: 1rem;
+}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .musicians-article {
-    margin: 1rem;
+    margin-left: 7.625rem;
+    margin-right: 7.625rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musicians-article {
     margin-left: 7.625rem;
     margin-right: 7.625rem;
   }
@@ -289,7 +297,7 @@ header .picture-title {
   margin: 1rem;
   -o-object-fit: contain;
      object-fit: contain;
-  width: 96%;
+  width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -325,32 +333,34 @@ header .picture-title {
   background-color: #fafafa;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
-.photo-gallery h1 {
-  display: flex;
-  padding-top: 1rem;
+.photo-gallery__heading {
   padding-left: 1rem;
 }
-.photo-gallery__img {
-  padding: 1rem;
-  width: 100%;
+.photo-gallery__images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.photo-gallery img {
+  margin: 1rem;
 }
 @media screen and (max-width: 767px) {
-  .photo-gallery__img {
+  .photo-gallery img {
+    width: 96%;
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallery__img {
+  .photo-gallery img {
     width: 28%;
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1280px) {
-  .photo-gallery__img {
+  .photo-gallery img {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
