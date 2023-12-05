@@ -361,6 +361,24 @@ header .picture-title {
   }
 }
 
+.comments {
+  margin-left: 1rem;
+}
+.comments__comment-box {
+  color: hotpink;
+}
+.comments__comment-box__img-textbox {
+  display: flex;
+  margin-left: 6rem;
+}
+.comments__comment-box__img-textbox img {
+  width: 30px;
+  height: 30px;
+}
+.comments__comment-box__textbox-button {
+  margin-left: 6rem;
+}
+
 .footer {
   background-color: #323232;
   padding: 1rem;
