@@ -1,3 +1,15 @@
+<!--
+  TASKS:
+  5/6th,
+  complete comments section, HTML included
+  - set up comment maker framework
+  - set up comment framework
+  - setup js code
+    - code needs to:
+    go though a list of already made comments (check if it must be a txt file)
+    add comments when ones made
+  - set up forms
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,28 +107,21 @@
 
     <!--███████████ Comments ███████████-->
     <section class="comments">
-      <h1>Join the Conversation</h1>
-
-      <div class="comments__comment-box">
-        <p>Name</p>
-        <div class="comments__comment-box__img-textbox">
+      <form class="comments__form" action="??????">
+        <h1>Join the Conversation</h1>
+        <label for="commentername" class="comments__form__name-label"
+          >Name</label
+        >
+        <div class="comments__form__image-commentername">
           <img src="./Assets/Images/Mohan-muruge.jpg" alt="Default Avatar" />
-          <form action="#">
-            <input name="name" />
-          </form>
+          <input type="text" name="commentername" />
         </div>
-        <div class="comments__comment-box__textbox-button">
-          <p>Comment</p>
-          <form action="#">
-            <input name="name" />
-          </form>
-          <button></button>
+        <div class="comments__form__submission-comment">
+          <label for="comment">Comment</label>
+          <input type="text" name="comment" />
+          <input type="submit" value="Submit" />
         </div>
-      </div>
-
-      <div class="comments__comment-list">
-        <article><p>Example comment</p></article>
-      </div>
+      </form>
     </section>
 
     <!--███████████ Footer ███████████-->

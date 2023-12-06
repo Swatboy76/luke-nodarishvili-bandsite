@@ -362,21 +362,29 @@ header .picture-title {
 }
 
 .comments {
-  margin-left: 1rem;
+  margin-bottom: 2rem;
 }
-.comments__comment-box {
-  color: hotpink;
+.comments__form {
+  color: yellowgreen;
 }
-.comments__comment-box__img-textbox {
+.comments__form__name-label {
+  margin-left: 4.2rem;
+}
+.comments__form__image-commentername {
   display: flex;
-  margin-left: 6rem;
 }
-.comments__comment-box__img-textbox img {
-  width: 30px;
-  height: 30px;
+.comments__form__image-commentername img {
+  width: 36px;
+  height: 36px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 50%;
 }
-.comments__comment-box__textbox-button {
-  margin-left: 6rem;
+.comments__form__submission-comment {
+  color: pink;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4.2rem;
 }
 
 .footer {

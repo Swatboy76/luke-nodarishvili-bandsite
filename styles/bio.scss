@@ -317,19 +317,27 @@ header {
 }
 
 .comments {
-  margin-left: 1rem;
-  &__comment-box {
-    color: hotpink;
-    &__img-textbox {
-      img {
-        width: 30px; //temp value
-        height: 30px; //temp value
-      }
-      display: flex;
-      margin-left: 6rem;
+  margin-bottom: 2rem;
+  &__form {
+    color: yellowgreen;
+    &__name-label {
+      margin-left: 4.2rem;
     }
-    &__textbox-button {
-      margin-left: 6rem;
+    &__image-commentername {
+      display: flex;
+      img {
+        width: 36px;
+        height: 36px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+      }
+    }
+    &__submission-comment {
+      color: pink;
+      display: flex;
+      flex-direction: column;
+      margin-left: 4.2rem;
     }
   }
 }
