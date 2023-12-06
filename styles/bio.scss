@@ -318,26 +318,63 @@ header {
 
 .comments {
   margin-bottom: 2rem;
+  font-family: avenir-Next-Bold;
   &__form {
-    color: yellowgreen;
+    border-bottom: #323232;
+    //name above image & textbox
     &__name-label {
       margin-left: 4.2rem;
+      margin-top: 12px; // <----------------------- PIXEL NUMBER
     }
+
+    //Image & textbox
     &__image-commentername {
       display: flex;
-      img {
-        width: 36px;
-        height: 36px;
+      align-items: center;
+      &__image {
+        width: 36px; // <------------------------,
+        height: 36px; // <----------------------- PIXEL NUMBER
         margin-left: 1rem;
         margin-right: 1rem;
         border-radius: 50%;
       }
+      &__textbox {
+        margin-top: 4px; // <--------------------------,
+        margin-bottom: 4px; // <----------------------- PIXEL NUMBER
+        width: 80%;
+        height: 36px; // <----------------------- PIXEL NUMBER
+        border-color: #e1e1e1;
+        border-style: solid;
+        border-radius: 4px; // <----------------------- PIXEL NUMBER
+        padding: 0.375rem; // 6 px
+      }
     }
+
+    //Comment box & Submission button
     &__submission-comment {
-      color: pink;
       display: flex;
       flex-direction: column;
       margin-left: 4.2rem;
+      margin-bottom: 12px; // <----------------------- PIXEL NUMBER
+      &__textbox {
+        width: 95.4%;
+        height: 100px; // <----------------------- PIXEL NUMBER
+        border-color: #e1e1e1;
+        border-style: solid;
+        border-radius: 4px; // <-----------------------,
+        margin-bottom: 12px; // <-----------------------,
+        margin-top: 4px; // <----------------------- PIXEL NUMBER
+        padding: 0.375rem; // 6 px
+      }
+      &__send-button {
+        width: 97.4%;
+        height: 40px; // <----------------------- PIXEL NUMBER
+        border-color: #323232;
+        border-style: solid;
+        background-color: #323232;
+        color: #fafafa;
+        border-radius: 4px; // <----------------------- PIXEL NUMBER
+      }
     }
   }
 }

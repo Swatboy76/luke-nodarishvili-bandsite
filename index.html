@@ -2,7 +2,7 @@
   TASKS:
   5/6th,
   complete comments section, HTML included
-  - set up comment maker framework
+  - set up comment maker framework /
   - set up comment framework
   - setup js code
     - code needs to:
@@ -113,13 +113,31 @@
           >Name</label
         >
         <div class="comments__form__image-commentername">
-          <img src="./Assets/Images/Mohan-muruge.jpg" alt="Default Avatar" />
-          <input type="text" name="commentername" />
+          <img
+            class="comments__form__image-commentername__image"
+            src="./Assets/Images/Mohan-muruge.jpg"
+            alt="Default Avatar"
+          />
+          <input
+            class="comments__form__image-commentername__textbox"
+            type="text"
+            name="commentername"
+            placeholder="Enter your name"
+          />
         </div>
         <div class="comments__form__submission-comment">
           <label for="comment">Comment</label>
-          <input type="text" name="comment" />
-          <input type="submit" value="Submit" />
+          <input
+            class="comments__form__submission-comment__textbox"
+            type="text"
+            name="comment"
+            placeholder="Add a new comment"
+          />
+          <input
+            class="comments__form__submission-comment__send-button"
+            type="submit"
+            value="Comment"
+          />
         </div>
       </form>
     </section>
