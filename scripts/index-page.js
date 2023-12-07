@@ -1,13 +1,32 @@
 console.log("debug_0");
 //fishish "Load comments" Asap (preferably on the train).If you have energy left you can do make comments aswell.(dont kill yourself)
 
-let comments = [{ name: "Bobert  bobybob", date: "02/17/2021", pfp: "N/A" }];
+let comments = [
+  {
+    name: "Bobert  bobybob",
+    date: "02/17/2021",
+    pfp: "N/A",
+    txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserve reverence. Let us appreciate this for what it is and what it contains.",
+  },
+  {
+    name: "Bobert  bobybob",
+    date: "02/17/2021",
+    pfp: "N/A",
+    txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserve reverence. Let us appreciate this for what it is and what it contains.",
+  },
+];
 
 function mAkeComment() {}
 
 function lOadComments() {
-  for (let i = 0; i < comments.length; i++) {}
+  let comments = document.querySelector("comment-section__comments__article");
+
+  for (let i = 0; i < comments.length; i++) {
+    console.log("debug2");
+    let current_comment = document.createElement("article");
+  }
 }
+lOadComments();
 
 /*
 
