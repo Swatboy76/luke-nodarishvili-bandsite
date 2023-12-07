@@ -1,3 +1,321 @@
+@use "./partials/variables&fonts.scss" as *;
+@use "./partials/breakpoints.scss" as *;
+
 body {
-  color: hotpink;
+  margin: 0; //ask how to make this less important so that it can be overridden
+  @include phonescreen {
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: 700;
+      font-family: avenir-Next-Bold;
+    }
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600; //get this working
+      font-family: avenir-Next-Reg;
+    }
+    h3 {
+      font-size: 0.813rem;
+      line-height: 1.375rem;
+      font-weight: 600;
+      font-family: avenir-Next-Demi;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.125rem;
+      font-weight: 400;
+      font-family: avenir-Next-Reg;
+    }
+    footer {
+      font-size: 0.813rem;
+      line-height: 1.25rem;
+      font-weight: 400;
+      font-family: avenir-Next-Reg;
+    }
+    a,
+    button {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      font-family: avenir-Next-Bold;
+    }
+  }
+  @include tabletscreen {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+      font-family: avenir-Next-Bold;
+    }
+    h2 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: demi 600; //get this working
+      font-family: avenir-Next-Reg;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      font-family: avenir-Next-Demi;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      font-family: avenir-Next-Reg;
+    }
+    footer {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 400;
+      font-family: avenir-Next-Reg;
+    }
+    a,
+    button {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      font-family: avenir-Next-Bold;
+    }
+  }
+  @include computerscreen {
+    h1 {
+      font-size: 4rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+      font-family: avenir-Next-Bold;
+    }
+    h2 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: demi 600; //get this working
+      font-family: avenir-Next-Reg;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      font-family: avenir-Next-Demi;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      font-family: avenir-Next-Reg;
+    }
+    footer {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 400;
+      font-family: avenir-Next-Reg;
+    }
+    a,
+    button {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      font-family: avenir-Next-Bold;
+    }
+  }
+}
+
+header {
+  background-color: $footer-header-colour;
+  color: $footer-header-colour-text;
+
+  display: flex;
+  flex-direction: column;
+  /*#################################### TOP BAR ####################################*/
+  .topbar {
+    display: flex;
+    flex-direction: column;
+    @include tabletscreen {
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+    }
+    @include computerscreen {
+      flex-direction: row;
+      height: 5rem;
+      align-items: center;
+    }
+    &__picture {
+      position: relative;
+      h1 {
+        position: absolute;
+        top: 34%;
+        left: 1rem;
+        @include tabletscreen {
+          left: 2rem;
+        }
+        @include computerscreen {
+          left: 8rem;
+        }
+      }
+    }
+    &__img {
+      margin-top: $mobile-margin-16;
+      margin-bottom: $mobile-margin-16;
+      margin-left: auto;
+      margin-right: auto;
+      @include tabletscreen {
+        margin-top: $tablet-or-computer-margin-36;
+        margin-bottom: $tablet-or-computer-margin-36;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+      }
+      @include computerscreen {
+        margin-top: $tablet-or-computer-margin-36;
+        margin-bottom: $tablet-or-computer-margin-36;
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+      }
+      height: 1.25rem;
+      width: 7.5rem;
+    }
+    /*#################################### NAV ####################################*/
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      @include tabletscreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      @include computerscreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      /*#################################### NAV LINKS ####################################*/
+    }
+    &__link {
+      text-decoration: none;
+      color: $footer-header-colour-text;
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      &--current-page {
+        border-bottom: 0.25rem solid white;
+        @include tabletscreen {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+        @include computerscreen {
+          border-bottom: 4px solid white;
+          padding-bottom: 1.75rem;
+          padding-top: 1.75rem;
+        }
+      }
+    }
+  }
+  .picture-title {
+    background-image: url(../Assets/Images/hero-bio.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    opacity: 60%;
+    @include phonescreen {
+      height: 30vh;
+      padding: $mobile-margin-16;
+    }
+    @include tabletscreen {
+      height: 48vh;
+      padding: $tablet-or-computer-margin-48;
+    }
+    @include computerscreen {
+      height: 48vh;
+      padding: 10rem; //computer format, no fixed number so i thew in 160px
+    }
+  }
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+  &__header {
+    @include tabletscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include computerscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--left {
+      @include phonescreen {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      @include tabletscreen {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+      @include computerscreen {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    img {
+      width: 30px;
+    }
+  }
+  &__body {
+    @include tabletscreen {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+    }
+    @include computerscreen {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+    }
+    &-details {
+      margin: 2rem 0;
+      &--name {
+        h3 {
+          margin: 0;
+        }
+      }
+      &--address {
+        margin: 1rem 0;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__logo {
+    width: 120px;
+    &--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;
+      }
+    }
+  }
 }

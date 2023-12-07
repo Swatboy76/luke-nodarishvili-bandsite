@@ -1,3 +1,363 @@
+@font-face {
+  font-family: avenir-Next-Reg;
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: avenir-Next-Bold;
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: avenir-Next-Demi;
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
+}
 body {
-  color: hotpink;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  body h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 0.813rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  body h1 {
+    font-size: 2.5rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body h1 {
+    font-size: 4rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: demi 600;
+    font-family: avenir-Next-Reg;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: avenir-Next-Demi;
+  }
+  body p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: avenir-Next-Reg;
+  }
+  body a,
+  body button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: avenir-Next-Bold;
+  }
+}
+
+header {
+  background-color: #323232;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /*#################################### TOP BAR ####################################*/
+}
+header .topbar {
+  display: flex;
+  flex-direction: column;
+  /*#################################### NAV ####################################*/
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
+}
+header .topbar__picture {
+  position: relative;
+}
+header .topbar__picture h1 {
+  position: absolute;
+  top: 34%;
+  left: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__picture h1 {
+    left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__picture h1 {
+    left: 8rem;
+  }
+}
+header .topbar__img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1.25rem;
+  width: 7.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__img {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__img {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+  }
+}
+header .topbar__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /*#################################### NAV LINKS ####################################*/
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+header .topbar__link {
+  text-decoration: none;
+  color: #ffffff;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+header .topbar__link--current-page {
+  border-bottom: 0.25rem solid white;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .topbar__link--current-page {
+    border-bottom: 4px solid white;
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .topbar__link--current-page {
+    border-bottom: 4px solid white;
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+  }
+}
+header .picture-title {
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  opacity: 60%;
+}
+@media screen and (max-width: 767px) {
+  header .picture-title {
+    height: 30vh;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  header .picture-title {
+    height: 48vh;
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header .picture-title {
+    height: 48vh;
+    padding: 10rem;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+.footer__socials img {
+  width: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.footer__body-details {
+  margin: 2rem 0;
+}
+.footer__body-details--name h3 {
+  margin: 0;
+}
+.footer__body-details--address {
+  margin: 1rem 0;
+}
+.footer__body-details--address p {
+  margin: 0;
+}
+.footer__logo {
+  width: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo--widescreen {
+    display: none;
+  }
 }/*# sourceMappingURL=shows.css.map */
