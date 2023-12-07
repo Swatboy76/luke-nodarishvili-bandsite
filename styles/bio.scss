@@ -320,7 +320,7 @@ header {
   margin: 0.5rem;
   font-family: avenir-Next-Bold;
   &__form {
-    border-bottom: #323232;
+    border-bottom: 1px solid #e1e1e1;
     //name above image & textbox
     &__name-label {
       margin-left: 4.2rem;
@@ -352,6 +352,7 @@ header {
 
     //Comment box & Submission button
     &__submission-comment {
+      border-bottom: 1px solid #e1e1e1;
       display: flex;
       flex-direction: column;
       margin-left: 4.2rem;
@@ -385,13 +386,12 @@ header {
         height: 36px; // <----------------------- PIXEL NUMBER
         margin-left: 1rem;
         margin-right: 1rem;
+        margin-top: 0.5rem;
         border-radius: 50%;
-        margin: 1rem;
       }
       &__headerdate {
         display: flex;
         justify-content: space-between;
-        margin: 0 1rem;
       }
     }
   }

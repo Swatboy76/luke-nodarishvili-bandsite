@@ -5,7 +5,9 @@ let comments = [{ name: "Bobert  bobybob", date: "02/17/2021", pfp: "N/A" }];
 
 function mAkeComment() {}
 
-function lOadComments() {}
+function lOadComments() {
+  for (let i = 0; i < comments.length; i++) {}
+}
 
 /*
 
