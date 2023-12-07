@@ -316,7 +316,7 @@ header {
   }
 }
 
-.comments {
+.comment-section {
   margin-bottom: 2rem;
   font-family: avenir-Next-Bold;
   &__form {
@@ -374,6 +374,15 @@ header {
         background-color: #323232;
         color: #fafafa;
         border-radius: 4px; // <----------------------- PIXEL NUMBER
+      }
+    }
+  }
+  &__comments {
+    &__article {
+      display: flex;
+      &__headerdate {
+        display: flex;
+        justify-content: space-between;
       }
     }
   }

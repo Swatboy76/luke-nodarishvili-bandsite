@@ -361,29 +361,29 @@ header .picture-title {
   }
 }
 
-.comments {
+.comment-section {
   margin-bottom: 2rem;
   font-family: avenir-Next-Bold;
 }
-.comments__form {
+.comment-section__form {
   border-bottom: #323232;
 }
-.comments__form__name-label {
+.comment-section__form__name-label {
   margin-left: 4.2rem;
   margin-top: 12px;
 }
-.comments__form__image-commentername {
+.comment-section__form__image-commentername {
   display: flex;
   align-items: center;
 }
-.comments__form__image-commentername__image {
+.comment-section__form__image-commentername__image {
   width: 36px;
   height: 36px;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 50%;
 }
-.comments__form__image-commentername__textbox {
+.comment-section__form__image-commentername__textbox {
   margin-top: 4px;
   margin-bottom: 4px;
   width: 80%;
@@ -393,13 +393,13 @@ header .picture-title {
   border-radius: 4px;
   padding: 0.375rem;
 }
-.comments__form__submission-comment {
+.comment-section__form__submission-comment {
   display: flex;
   flex-direction: column;
   margin-left: 4.2rem;
   margin-bottom: 12px;
 }
-.comments__form__submission-comment__textbox {
+.comment-section__form__submission-comment__textbox {
   width: 95.4%;
   height: 100px;
   border-color: #e1e1e1;
@@ -409,7 +409,7 @@ header .picture-title {
   margin-top: 4px;
   padding: 0.375rem;
 }
-.comments__form__submission-comment__send-button {
+.comment-section__form__submission-comment__send-button {
   width: 97.4%;
   height: 40px;
   border-color: #323232;
@@ -417,6 +417,13 @@ header .picture-title {
   background-color: #323232;
   color: #fafafa;
   border-radius: 4px;
+}
+.comment-section__comments__article {
+  display: flex;
+}
+.comment-section__comments__article__headerdate {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {
