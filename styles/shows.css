@@ -160,18 +160,20 @@ header .topbar {
 header .topbar__picture {
   position: relative;
 }
-header .topbar__picture h1 {
+header .topbar__picture__heading {
   position: absolute;
-  top: 34%;
-  left: 1rem;
+  top: 4%;
+  padding: 0px 4% 0 4%;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar__picture h1 {
+  header .topbar__picture__heading {
     left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar__picture h1 {
+  header .topbar__picture__heading {
     left: 8rem;
   }
 }
@@ -255,7 +257,7 @@ header .picture-title {
 }
 @media screen and (max-width: 767px) {
   header .picture-title {
-    height: 30vh;
+    height: 22rem;
     padding: 1rem;
   }
 }

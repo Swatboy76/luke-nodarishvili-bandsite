@@ -144,10 +144,11 @@ header {
     }
     &__picture {
       position: relative;
-      h1 {
+      &__heading {
         position: absolute;
-        top: 34%;
-        left: 1rem;
+        top: 4%;
+        padding: 0px 4% 0 4%;
+        width: fit-content;
         @include tabletscreen {
           left: 2rem;
         }
@@ -224,16 +225,16 @@ header {
     align-items: center;
     opacity: 60%;
     @include phonescreen {
-      height: 30vh;
+      height: 22rem;
       padding: $mobile-margin-16;
     }
     @include tabletscreen {
-      height: 48vh;
+      height: 48vh; //CHANGE THIS
       padding: $tablet-or-computer-margin-48;
     }
     @include computerscreen {
       height: 48vh;
-      padding: 10rem; //computer format, no fixed number so i thew in 160px
+      padding: 10rem; //computer format, no fixed number so i thew in 160px //CHANGE THIS
     }
   }
 }
