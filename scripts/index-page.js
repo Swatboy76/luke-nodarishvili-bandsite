@@ -1,52 +1,74 @@
-console.log("debug_0");
-//fishish "Load comments" Asap (preferably on the train).If you have energy left you can do make comments aswell.(dont kill yourself)
-
-let comments = [
+let userComments = [
   {
-    name: "Bobert  bobybob",
+    name: "Connor Walton",
     date: "02/17/2021",
     pfp: "N/A",
-    txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserve reverence. Let us appreciate this for what it is and what it contains.",
+    txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
   {
-    name: "Bobert  bobybob",
-    date: "02/17/2021",
+    name: "Emilie Beach",
+    date: "01/09/2021",
     pfp: "N/A",
-    txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserve reverence. Let us appreciate this for what it is and what it contains.",
+    txt: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+  },
+  {
+    name: "Miles Acosta",
+    date: "12/20/2020",
+    pfp: "N/A",
+    txt: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
 ];
+const commentSection = document.getElementById("commentSection");
+function displayComments() {
+  for (let i = 0; i < userComments.length; i++) {
+    let createdArticle = document.createElement("article"); //makes the main article box
+    createdArticle.classList.add("comment-section__comments__article"); // adds CSS class to the box
+    //in logic we add the image to this, THEN after add the next line:
 
-function mAkeComment() {}
+    let articleHTML = document.createElement("div"); //makes the text div
+    articleHTML.classList.add("comment-section__comments__article__text");
+    //in logic once the text div is made we then put in the header__date div in:
 
-function lOadComments() {
-  let comments = document.querySelector("comment-section__comments__article");
+    let headerdateDiv = document.createElement("div"); //makes the username and date div
+    headerdateDiv.classList.add(
+      "comment-section__comments__article__headerdate"
+    );
+    //then only after do we add the comment text
 
-  for (let i = 0; i < comments.length; i++) {
-    console.log("debug2");
-    let current_comment = document.createElement("article");
+    //Making variables and HTML for adding to the above Divs
+
+    let nameText = userComments[i].name; //finds the string
+    let nameHTML = document.createElement("p"); //makes the P tag to put the string into
+    nameHTML.innerText = nameText; //puts the string into the P tag inside the "box" so it can be used later.
+
+    let dateText = userComments[i].date;
+    let dateHTML = document.createElement("p");
+    dateHTML.innerText = dateText;
+
+    let commentText = userComments[i].txt;
+    let commentHTML = document.createElement("p");
+    commentHTML.innerText = commentText;
+
+    let pfpSrc = userComments[i].pfp;
+    let pfpHTML = document.createElement("img"); //if PFP is blank/set to N/A it will simply use the backup
+    pfpHTML.setAttribute("src", pfpSrc);
+    pfpHTML.classList.add("comment-section__comments__article__image");
+
+    //Adding the Divs and P tags together and then formating
+
+    headerdateDiv.appendChild(dateHTML);
+    headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons
+
+    articleHTML.appendChild(headerdateDiv); //adds Div 4
+    articleHTML.appendChild(commentHTML); //adds P 5 below Div 4
+
+    createdArticle.appendChild(pfpHTML);
+    createdArticle.appendChild(articleHTML);
+    commentSection.appendChild(createdArticle);
+
+    console.log(createdArticle);
+
+    //add image
   }
 }
-lOadComments();
-
-/*
-
-  myAppointmentsEl.innerHTML = "";
-  
-  for (let i = 0; i < appointments.length; i++) {
-    //it looks at how long the list is and goes though each entity
-    const cardEl = document.createElement("article"); // this part... makes an <article> and adds the class = "Appointment"
-    cardEl.classList.add("appointment");
-
-    const headingEl = document.createElement("h3"); // this one makes a H3 and puts the i inside... AH HA
-    headingEl.innerText = appointments[i].name; // They take the NUMBER that I is. and go into the list looking for the INDEX...
-    //they then put the "name" part of that index in the H3
-
-    const dateEl = document.createElement("span"); // they look to be doing a similar thing here and using a span (???(?))
-    dateEl.innerText = appointments[i].date;// the "span" name is more a missnomer. their the same. see nots for details
-
-    cardEl.appendChild(headingEl); //this where they add the two parts to the card.a flex then makes it flat with a gap imbetween
-    cardEl.appendChild(dateEl);
-
-    myAppointmentsEl.appendChild(cardEl);
-  } // do not use above code, only reverce engineer and understand (Comment the [Sailor mouth] out of it)
-*/
+displayComments();
