@@ -19,7 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/bio.scss" />
     <link rel="stylesheet" href="./styles/bio.css" />
-    <script src="./scripts/index-page.js"></script>
     <title>Biography</title>
   </head>
   <body>
@@ -122,7 +121,7 @@
 
     <!--███████████ Comments ███████████-->
     <section class="comment-section">
-      <form class="comment-section__form" action="??????">
+      <form id="form-all" class="comment-section__form">
         <h1>Join the Conversation</h1>
         <label for="commentername" class="comment-section__form__name-label"
           >Name</label
@@ -134,15 +133,17 @@
             alt="Default Avatar"
           />
           <input
+            id="form-name"
             class="comment-section__form__image-commentername__textbox"
             type="text"
-            name="commentername"
+            name="name"
             placeholder="Enter your name"
           />
         </div>
         <div class="comment-section__form__submission-comment">
           <label for="comment">Comment</label>
           <input
+            id="form-comment"
             class="comment-section__form__submission-comment__textbox"
             type="text"
             name="comment"
@@ -151,13 +152,15 @@
           <input
             class="comment-section__form__submission-comment__send-button"
             type="submit"
+            name="submit"
             value="Comment"
-          />
+          >
+        </input>
         </div>
       </form>
 
       <section id="commentSection" class="comment-section__comments">
-        <article class="comment-section__comments__article">
+        <!-- Test article, Use as needed <article class="comment-section__comments__article">
           <img
             class="comment-section__comments__article__image"
             src="./Assets/Images/Mohan-muruge.jpg"
@@ -175,7 +178,7 @@
               contains.
             </p>
           </div>
-        </article>
+        </article>-->
       </section>
     </section>
 
@@ -239,4 +242,5 @@
       <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
   </body>
+  <script src="./scripts/index-page.js"></script>
 </html>

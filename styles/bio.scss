@@ -381,6 +381,7 @@ header {
   &__comments {
     &__article {
       display: flex;
+
       &__image {
         width: 36px; // <------------------------,
         height: 36px; // <----------------------- PIXEL NUMBER
@@ -392,6 +393,9 @@ header {
       &__headerdate {
         display: flex;
         justify-content: space-between;
+      }
+      &__text {
+        width: 100%;
       }
     }
   }
