@@ -36,7 +36,7 @@ function displayShows() {
     let createdArticle = document.createElement("article"); //makes the main article box, and adds the on-click system
     createdArticle.classList.add("shows__individual-show");
     createdArticle.onclick = function () {
-      newElement.classList.toggle("clicked");
+      createdArticle.classList.toggle("shows__individual-show--clicked");
     }; //this was recomended to me via research
 
     //1St Div (Reuse as needed)
@@ -66,7 +66,7 @@ function displayShows() {
     let div2data = showsList[i].venue; //Change
     let div2dataHTML = document.createElement("p");
     div2dataHTML.innerText = div2data; //puts the data (text) into the P tag
-    div2dataHTML.classList.add("shows__individual-show__data__date");
+    div2dataHTML.classList.add("shows__individual-show__data__other");
     div2HTML.appendChild(div2dataHTML); // adds the data (text) to the div
 
     //3rd Div (Reuse as needed)
@@ -81,7 +81,7 @@ function displayShows() {
     let div3data = showsList[i].location; //Change
     let div3dataHTML = document.createElement("p");
     div3dataHTML.innerText = div3data; //puts the data (text) into the P tag
-    div3dataHTML.classList.add("shows__individual-show__data__date");
+    div3dataHTML.classList.add("shows__individual-show__data__other");
     div3HTML.appendChild(div3dataHTML); // adds the data (text) to the div
 
     //button

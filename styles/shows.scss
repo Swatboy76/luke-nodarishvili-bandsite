@@ -243,19 +243,35 @@ header {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #e1e1e1;
   margin-bottom: 1rem;
+  @include tabletscreen {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include computerscreen {
+    display: flex;
+  }
   &__shows-bar-wide {
     display: flex;
     color: #afafaf;
     font-weight: 600;
-    gap: 150px;
+    gap: 60%;
+    padding-right: 64%;
     //when on mobile format below code runs
     @include phonescreen {
       display: none;
     }
   }
   &__individual-show {
+    border-bottom: 1px solid #e1e1e1;
+    @include tabletscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include computerscreen {
+      display: flex;
+      justify-content: space-between;
+    }
     &__label {
       color: #afafaf;
       // when on a wider format the below code runs
@@ -268,6 +284,7 @@ header {
     }
     &__data {
       padding: 0.25rem;
+      width: 26%;
 
       &__date {
         font-size: 1.25rem;
@@ -283,6 +300,12 @@ header {
       border-radius: 5px;
       width: 100%;
       height: 3rem;
+      @include tabletscreen {
+        width: 30%;
+      }
+      @include computerscreen {
+        width: 30%;
+      }
     }
   }
   &__individual-show:hover {
