@@ -363,7 +363,7 @@ header .picture-title {
 
 .comment-section {
   padding: 0.5rem;
-  font-family: avenir-Next-Bold;
+  font-family: avenir-Next-reg;
   margin-left: auto;
   margin-right: auto;
 }
@@ -385,7 +385,8 @@ header .picture-title {
 .comment-section__form {
   border-bottom: 1px solid #e1e1e1;
 }
-.comment-section__form__name-label {
+.comment-section__form__name-label-a {
+  color: #afafaf;
   margin-left: 4.2rem;
   margin-top: 12px;
 }
@@ -416,6 +417,9 @@ header .picture-title {
   flex-direction: column;
   margin-left: 4.2rem;
   margin-bottom: 12px;
+}
+.comment-section__form__submission-comment__label-b {
+  color: #afafaf;
 }
 .comment-section__form__submission-comment__textbox {
   height: 100px;

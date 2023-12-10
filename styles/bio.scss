@@ -327,13 +327,14 @@ header {
     width: 40%;
   }
   padding: 0.5rem;
-  font-family: avenir-Next-Bold;
+  font-family: avenir-Next-reg;
   margin-left: auto;
   margin-right: auto;
   &__form {
     border-bottom: 1px solid #e1e1e1;
     //name above image & textbox
-    &__name-label {
+    &__name-label-a {
+      color: #afafaf;
       margin-left: 4.2rem;
       margin-top: 12px; // <----------------------- PIXEL NUMBER
     }
@@ -361,14 +362,15 @@ header {
       }
     }
 
-    //Comment box & Submission button
+    //Comment box & Submission button comment-section__form__submission-comment__label-b
     &__submission-comment {
       border-bottom: 1px solid #e1e1e1;
       display: flex;
       flex-direction: column;
       margin-left: 4.2rem;
       margin-bottom: 12px; // <----------------------- PIXEL NUMBER
-      &__label {
+      &__label-b {
+        color: #afafaf;
       }
       &__textbox {
         //width: 95.4%;
