@@ -44,9 +44,29 @@
       </section>
     </header>
 
-    <section>
+    <section class="shows">
       <h1>Shows</h1>
-      <article></article>
+      <div class="shows__shows-bar-wide">
+        <p>Date</p>
+        <p>Venue</p>
+        <p>Location</p>
+      </div>
+      <article class="shows__individual-show" onclick="changeColor(this)">
+        <div class="shows__individual-show__data">
+          <p class="shows__individual-show__label">DATE</p>
+          <!--remove on widescreen mode-->
+          <p class="shows__individual-show__data__date">Mon Sept 06 2021</p>
+        </div>
+        <div class="shows__individual-show__data">
+          <p class="shows__individual-show__label">VENUE</p>
+          <p class="shows__individual-show__data__others">Ronald Lane</p>
+        </div>
+        <div class="shows__individual-show__data">
+          <p class="shows__individual-show__label">LOCATION</p>
+          <p class="shows__individual-show__data__others">San Francisco, CA</p>
+        </div>
+        <button class="shows__individual-show__buy-tickets">Buy Tickets</button>
+      </article>
       <!--Maybe take the same method as the footer logos, make two versions of the list and then
       make the incorrect one invisible? that whould mean doing twice rather than once-->
     </section>

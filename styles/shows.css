@@ -263,7 +263,7 @@ header .picture-title {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   header .picture-title {
-    height: 48vh;
+    height: 52vh;
     padding: 3rem;
   }
 }
@@ -272,6 +272,59 @@ header .picture-title {
     height: 48vh;
     padding: 10rem;
   }
+}
+
+.shows {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 1rem;
+}
+.shows__shows-bar-wide {
+  display: flex;
+  color: #afafaf;
+  font-weight: 600;
+  gap: 150px;
+}
+@media screen and (max-width: 767px) {
+  .shows__shows-bar-wide {
+    display: none;
+  }
+}
+.shows__individual-show__label {
+  color: #afafaf;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__individual-show__label {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__individual-show__label {
+    display: none;
+  }
+}
+.shows__individual-show__data {
+  padding: 0.25rem;
+}
+.shows__individual-show__data__date {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.shows__individual-show__data__others {
+  font-size: 1.25rem;
+}
+.shows__individual-show__buy-tickets {
+  background-color: #323232;
+  border-radius: 5px;
+  width: 100%;
+}
+.shows__individual-show:hover {
+  background-color: #fafafa;
+}
+.shows__individual-show--clicked {
+  background-color: #323232;
 }
 
 .footer {
@@ -362,4 +415,16 @@ header .picture-title {
   .footer__logo--widescreen {
     display: none;
   }
-}/*# sourceMappingURL=shows.css.map */
+}
+
+/*&--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;*//*# sourceMappingURL=shows.css.map */

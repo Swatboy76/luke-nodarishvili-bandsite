@@ -229,14 +229,67 @@ header {
       padding: $mobile-margin-16;
     }
     @include tabletscreen {
-      height: 48vh; //CHANGE THIS
+      height: 52vh;
       padding: $tablet-or-computer-margin-48;
     }
     @include computerscreen {
       height: 48vh;
-      padding: 10rem; //computer format, no fixed number so i thew in 160px //CHANGE THIS
+      padding: 10rem;
     }
   }
+}
+
+.shows {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 1rem;
+  &__shows-bar-wide {
+    display: flex;
+    color: #afafaf;
+    font-weight: 600;
+    gap: 150px;
+    //when on mobile format below code runs
+    @include phonescreen {
+      display: none;
+    }
+  }
+  &__individual-show {
+    &__label {
+      color: #afafaf;
+      // when on a wider format the below code runs
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &__data {
+      padding: 0.25rem;
+
+      &__date {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      &__others {
+        font-size: 1.25rem;
+      }
+    }
+    &__buy-tickets {
+      background-color: #323232;
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+  &__individual-show:hover {
+    background-color: #fafafa;
+  }
+  &__individual-show--clicked {
+    background-color: #323232;
+  }
+  //article here
 }
 
 .footer {
@@ -320,3 +373,14 @@ header {
     }
   }
 }
+/*&--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;*/
