@@ -22,6 +22,7 @@ let userComments = [
 document.getElementById("form-all").onsubmit = displayComments;
 
 function displayComments(event) {
+  //make this only push to the array, and then refesh the... comments by deleting them do innterHTML = ""
   event.preventDefault();
   console.log("debug_1");
   const targetHTML = document.getElementById("commentSection");

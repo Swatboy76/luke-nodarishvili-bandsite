@@ -388,6 +388,7 @@ header .picture-title {
 .comment-section__form__name-label-a {
   color: #afafaf;
   margin-left: 4.2rem;
+  font-weight: 700;
   margin-top: 12px;
 }
 .comment-section__form__image-commentername {
@@ -420,6 +421,7 @@ header .picture-title {
 }
 .comment-section__form__submission-comment__label-b {
   color: #afafaf;
+  font-weight: 700;
 }
 .comment-section__form__submission-comment__textbox {
   height: 100px;

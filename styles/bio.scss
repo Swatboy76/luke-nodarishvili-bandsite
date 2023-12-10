@@ -336,6 +336,7 @@ header {
     &__name-label-a {
       color: #afafaf;
       margin-left: 4.2rem;
+      font-weight: 700;
       margin-top: 12px; // <----------------------- PIXEL NUMBER
     }
 
@@ -371,6 +372,7 @@ header {
       margin-bottom: 12px; // <----------------------- PIXEL NUMBER
       &__label-b {
         color: #afafaf;
+        font-weight: 700;
       }
       &__textbox {
         //width: 95.4%;
