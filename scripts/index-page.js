@@ -45,9 +45,9 @@ function displayComments(event) {
   nameHTML.innerText = nameText; //puts the string into the P tag inside the "box" so it can be used later.
   console.log(nameText);
 
-  //let dateText = userComments[i].date;
+  let dateText = new Date().toISOString().split("T")[0];
   let dateHTML = document.createElement("p");
-  dateHTML.innerText = "dateText";
+  dateHTML.innerText = dateText;
 
   //    let commentText = userComments[i].txt;
   let commentText = document.getElementById("form-comment").value;
@@ -61,8 +61,8 @@ function displayComments(event) {
 
   //Adding the Divs and P tags together and then formating
 
-  headerdateDiv.appendChild(dateHTML);
   headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons
+  headerdateDiv.appendChild(dateHTML);
 
   articleHTML.appendChild(headerdateDiv); //adds Div 4
   articleHTML.appendChild(commentHTML); //adds P 5 below Div 4
@@ -105,6 +105,9 @@ function loadComments() {
 
     let dateText = userComments[i].date;
     let dateHTML = document.createElement("p");
+    dateHTML.classList.add(
+      "comment-section__comments__article__headerdate__date"
+    );
     dateHTML.innerText = dateText;
 
     let commentText = userComments[i].txt;
@@ -118,8 +121,8 @@ function loadComments() {
 
     //Adding the Divs and P tags together and then formating
 
-    headerdateDiv.appendChild(dateHTML);
     headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons
+    headerdateDiv.appendChild(dateHTML);
 
     articleHTML.appendChild(headerdateDiv); //adds Div 4
     articleHTML.appendChild(commentHTML); //adds P 5 below Div 4
