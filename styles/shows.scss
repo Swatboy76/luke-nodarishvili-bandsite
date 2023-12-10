@@ -121,6 +121,7 @@ body {
     }
   }
 }
+
 header {
   background-color: $footer-header-colour;
   color: $footer-header-colour-text;
@@ -143,10 +144,11 @@ header {
     }
     &__picture {
       position: relative;
-      h1 {
+      &__heading {
         position: absolute;
-        top: 34%;
-        left: 1rem;
+        top: 4%;
+        padding: 0px 4% 0 4%;
+        width: fit-content;
         @include tabletscreen {
           left: 2rem;
         }
@@ -217,210 +219,102 @@ header {
     }
   }
   .picture-title {
-    background-image: url(../Assets/Images/hero-bio.jpg);
+    background-image: url(../Assets/Images/Photo-gallery-3.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
     opacity: 60%;
     @include phonescreen {
-      height: 30vh;
+      height: 22rem;
       padding: $mobile-margin-16;
     }
     @include tabletscreen {
-      height: 48vh;
+      height: 52vh;
       padding: $tablet-or-computer-margin-48;
     }
     @include computerscreen {
       height: 48vh;
-      padding: 10rem; //computer format, no fixed number so i thew in 160px
+      padding: 10rem;
     }
   }
 }
 
-.musicians-article {
-  margin: 1rem;
+.shows {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   @include tabletscreen {
-    margin-left: 7.625rem;
-    margin-right: 7.625rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   @include computerscreen {
-    margin-left: 7.625rem;
-    margin-right: 7.625rem;
-  }
-  &__img {
-    margin: $mobile-margin-16;
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @include tabletscreen {
-      //margin: 122px;
-      //width: 78%;
-    }
-    @include computerscreen {
-      margin-left: 122px;
-      margin-right: 122px;
-      width: 78%;
-    }
-  }
-  &__paragraph {
-    @include tabletscreen {
-      display: flex;
-      &__text {
-        display: flex;
-        margin: 1rem;
-      }
-    }
-    @include computerscreen {
-      display: flex;
-      &__text {
-        display: flex;
-        margin: 1rem;
-      }
-    }
-  }
-}
-
-.photo-gallery {
-  background-color: #fafafa;
-  display: flex;
-  flex-wrap: wrap;
-  &__heading {
-    padding-left: $mobile-margin-16;
-  }
-  &__images {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
-  img {
-    //talk to argen about this
-    margin: 1rem;
+  &__shows-bar-wide {
+    display: flex;
+    color: #afafaf;
+    font-weight: 600;
+    gap: 60%;
+    padding-right: 64%;
+    //when on mobile format below code runs
     @include phonescreen {
-      width: 96%;
-      display: flex;
-      justify-content: center;
+      display: none;
     }
+  }
+  &__individual-show {
+    border-bottom: 1px solid #e1e1e1;
     @include tabletscreen {
-      width: 28%;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
     @include computerscreen {
-      width: 30%;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
-  }
-}
-
-.comment-section {
-  @include phonescreen {
-    width: 90%;
-  }
-  @include tabletscreen {
-    width: 70%;
-  }
-  @include computerscreen {
-    width: 40%;
-  }
-  padding: 0.5rem;
-  font-family: avenir-Next-reg;
-  margin-left: auto;
-  margin-right: auto;
-  &__form {
-    border-bottom: 1px solid #e1e1e1;
-    //name above image & textbox
-    &__name-label-a {
+    &__label {
       color: #afafaf;
-      margin-left: 4.2rem;
-      font-weight: 700;
-      margin-top: 12px; // <----------------------- PIXEL NUMBER
-    }
-
-    //Image & textbox
-    &__image-commentername {
-      display: flex;
-      align-items: center;
-      &__image {
-        width: 36px; // <------------------------,
-        height: 36px; // <----------------------- PIXEL NUMBER
-        margin-left: 1rem;
-        margin-right: 1rem;
-        border-radius: 50%;
+      // when on a wider format the below code runs
+      @include tabletscreen {
+        display: none;
       }
-      &__textbox {
-        margin-top: 4px; // <--------------------------,
-        margin-bottom: 4px; // <----------------------- PIXEL NUMBER
-        width: 100%;
-        height: 36px; // <----------------------- PIXEL NUMBER
-        border-color: #e1e1e1;
-        border-style: solid;
-        border-radius: 4px; // <----------------------- PIXEL NUMBER
-        padding: 0.375rem; // 6 px
+      @include computerscreen {
+        display: none;
       }
     }
+    &__data {
+      padding: 0.25rem;
+      width: 26%;
 
-    //Comment box & Submission button comment-section__form__submission-comment__label-b
-    &__submission-comment {
-      border-bottom: 1px solid #e1e1e1;
-      display: flex;
-      flex-direction: column;
-      margin-left: 4.2rem;
-      margin-bottom: 12px; // <----------------------- PIXEL NUMBER
-      &__label-b {
-        color: #afafaf;
+      &__date {
+        font-size: 1.25rem;
         font-weight: 700;
       }
-      &__textbox {
-        //width: 95.4%;
-        height: 100px; // <----------------------- PIXEL NUMBER
-        border-color: #e1e1e1;
-        border-style: solid;
-        border-radius: 4px; // <-----------------------,
-        margin-bottom: 12px; // <-----------------------\
-        margin-top: 4px; // <----------------------- PIXEL NUMBER
-        padding: 0.375rem; // 6 px
-        text-align: left;
-        vertical-align: top;
+      &__others {
+        font-size: 1.25rem;
       }
-      &__send-button {
-        //width: 97.4%;
-        height: 40px; // <----------------------- PIXEL NUMBER
-        border-color: #323232;
-        border-style: solid;
-        background-color: #323232;
-        color: #fafafa;
-        border-radius: 4px; // <----------------------- PIXEL NUMBER
+    }
+    &__buy-tickets {
+      color: #fafafa;
+      background-color: #323232; //fix size and font colour
+      border-radius: 5px;
+      width: 100%;
+      height: 3rem;
+      @include tabletscreen {
+        width: 30%;
+      }
+      @include computerscreen {
+        width: 30%;
       }
     }
   }
-  &__comments {
-    &__article {
-      border-bottom: 1px solid #e1e1e1;
-      display: flex;
-      &__image {
-        width: 36px; // <------------------------,
-        height: 36px; // <----------------------- PIXEL NUMBER
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 0.5rem;
-        border-radius: 50%;
-      }
-      &__headerdate {
-        &__date {
-          color: #afafaf;
-        }
-        display: flex;
-        justify-content: space-between;
-      }
-      &__text {
-        width: 100%;
-      }
-    }
+  &__individual-show:hover {
+    background-color: #fafafa;
   }
+  &__individual-show--clicked {
+    background-color: #e1e1e1;
+  }
+  //article here
 }
 
 .footer {
@@ -504,3 +398,14 @@ header {
     }
   }
 }
+/*&--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;*/

@@ -1,3 +1,17 @@
+<!--
+  TASKS:
+  5/6th,
+  complete comments section, HTML included
+  - set up comment maker framework /
+  - set up comment framework
+  - setup js code
+    - code needs to:
+    go though a list of already made comments (check if it must be a txt file)
+    add comments when ones made
+  - set up forms
+
+
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,9 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/bio.scss" />
     <link rel="stylesheet" href="./styles/bio.css" />
-    <title>Document</title>
+    <title>Biography</title>
   </head>
   <body>
+    <!--███████████ Header ███████████-->
     <header>
       <div class="topbar">
         <a href="./index.html"
@@ -17,20 +32,19 @@
             alt="Bandsite"
         /></a>
         <nav class="topbar__nav">
-          <a class="topbar__link topbar__link--current-page" href="#"
+          <a class="topbar__link topbar__link--current-page" href="./index.html"
             >Biography</a
           >
-          <a class="topbar__link" href="#">Shows</a>
+          <a class="topbar__link" href="./pages/shows.html">Shows</a>
         </nav>
       </div>
       <section class="topbar__picture">
         <div class="picture-title"></div>
         <h1>The Bees Knees</h1>
       </section>
-
-      <!-- use position absolute and place overlay div behind the h1   -->
     </header>
 
+    <!--███████████ Biography ███████████-->
     <article class="musicians-article">
       <h1>About the musicians</h1>
       <img
@@ -75,6 +89,7 @@
       </div>
     </article>
 
+    <!--███████████ Photo Gallery ███████████-->
     <section class="photo-gallery">
       <h1 class="photo-gallery__heading">Photo Gallery</h1>
       <div class="photo-gallery__images">
@@ -83,14 +98,91 @@
         <img src="./Assets/Images/Photo-gallery-3.jpg" alt="#" />
 
         <img src="./Assets/Images/Photo-gallery-4.jpg" alt="#" />
-        <img src="./Assets/Images/Photo-gallery-5.jpg" alt="#" />
-        <img src="./Assets/Images/Photo-gallery-6.jpg" alt="#" />
+        <img
+          src="./Assets/Images/Photo-gallery-5.jpg"
+          alt="cheering people and enourmous quanties of silly string"
+        />
+        <img
+          src="./Assets/Images/Photo-gallery-6.jpg"
+          alt="Main singer singing"
+        />
 
-        <img src="./Assets/Images/Photo-gallery-7.jpg" alt="#" />
-        <img src="./Assets/Images/Photo-gallery-8.jpg" alt="#" />
-        <img src="./Assets/Images/Photo-gallery-9.jpg" alt="#" />
+        <img
+          src="./Assets/Images/Photo-gallery-7.jpg"
+          alt="Widescreen Confetii and people cheering"
+        />
+        <img src="./Assets/Images/Photo-gallery-8.jpg" alt="DJ mixer board" />
+        <img
+          src="./Assets/Images/Photo-gallery-9.jpg"
+          alt="Confetii and people cheering"
+        />
       </div>
     </section>
+
+    <!--███████████ Comments ███████████-->
+    <section class="comment-section">
+      <form id="form-all" class="comment-section__form">
+        <h1>Join the Conversation</h1>
+        <label for="commentername" class="comment-section__form__name-label-a"
+          >Name</label
+        >
+        <div class="comment-section__form__image-commentername">
+          <img
+            class="comment-section__form__image-commentername__image"
+            src="./Assets/Images/Mohan-muruge.jpg"
+            alt="Default Avatar"
+          />
+          <input
+            id="form-name"
+            class="comment-section__form__image-commentername__textbox"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="comment-section__form__submission-comment">
+          <label class="comment-section__form__submission-comment__label-b" for="comment">Comment</label>
+          <input
+            id="form-comment"
+            class="comment-section__form__submission-comment__textbox"
+            type="text"
+            name="comment"
+            placeholder="Add a new comment"
+          />
+          <input
+            class="comment-section__form__submission-comment__send-button"
+            type="submit"
+            name="submit"
+            value="Comment"
+          >
+        </input>
+        </div>
+      </form>
+
+      <section id="commentSection" class="comment-section__comments">
+        <!-- Test article, Use as needed <article class="comment-section__comments__article">
+          <img
+            class="comment-section__comments__article__image"
+            src="./Assets/Images/Mohan-muruge.jpg"
+            alt="PfP"
+          />
+          <div class="comment-section__comments__article__text">
+            <div class="comment-section__comments__article__headerdate">
+              <p>name</p>
+              <p>date</p>
+            </div>
+            <p>
+              This is art. This is inexplicable magic expressed in the purest
+              way, everything that makes up this majestic work deserves
+              reverence. Let us appreciate this for what it is and what it
+              contains.
+            </p>
+          </div>
+        </article>-->
+      </section>
+    </section>
+
+    <!--███████████ Footer ███████████-->
     <footer class="footer">
       <div class="footer__header">
         <div class="footer__header--left">
@@ -150,4 +242,5 @@
       <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
   </body>
+  <script src="./scripts/index-page.js"></script>
 </html>

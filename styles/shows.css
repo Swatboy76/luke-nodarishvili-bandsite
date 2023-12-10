@@ -160,18 +160,20 @@ header .topbar {
 header .topbar__picture {
   position: relative;
 }
-header .topbar__picture h1 {
+header .topbar__picture__heading {
   position: absolute;
-  top: 34%;
-  left: 1rem;
+  top: 4%;
+  padding: 0px 4% 0 4%;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar__picture h1 {
+  header .topbar__picture__heading {
     left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar__picture h1 {
+  header .topbar__picture__heading {
     left: 8rem;
   }
 }
@@ -247,7 +249,7 @@ header .topbar__link--current-page {
   }
 }
 header .picture-title {
-  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-image: url(../Assets/Images/Photo-gallery-3.jpg);
   background-size: cover;
   display: flex;
   align-items: center;
@@ -255,13 +257,13 @@ header .picture-title {
 }
 @media screen and (max-width: 767px) {
   header .picture-title {
-    height: 30vh;
+    height: 22rem;
     padding: 1rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   header .picture-title {
-    height: 48vh;
+    height: 52vh;
     padding: 3rem;
   }
 }
@@ -272,197 +274,96 @@ header .picture-title {
   }
 }
 
-.musicians-article {
-  margin: 1rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .musicians-article {
-    margin-left: 7.625rem;
-    margin-right: 7.625rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians-article {
-    margin-left: 7.625rem;
-    margin-right: 7.625rem;
-  }
-}
-.musicians-article__img {
-  margin: 1rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (min-width: 1280px) {
-  .musicians-article__img {
-    margin-left: 122px;
-    margin-right: 122px;
-    width: 78%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .musicians-article__paragraph {
-    display: flex;
-  }
-  .musicians-article__paragraph__text {
-    display: flex;
-    margin: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians-article__paragraph {
-    display: flex;
-  }
-  .musicians-article__paragraph__text {
-    display: flex;
-    margin: 1rem;
-  }
-}
-
-.photo-gallery {
-  background-color: #fafafa;
-  display: flex;
-  flex-wrap: wrap;
-}
-.photo-gallery__heading {
+.shows {
   padding-left: 1rem;
-}
-.photo-gallery__images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.photo-gallery img {
-  margin: 1rem;
-}
-@media screen and (max-width: 767px) {
-  .photo-gallery img {
-    width: 96%;
-    display: flex;
-    justify-content: center;
-  }
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallery img {
-    width: 28%;
-    display: flex;
-    flex-wrap: wrap;
+  .shows {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .photo-gallery img {
-    width: 30%;
+  .shows {
     display: flex;
-    flex-wrap: wrap;
   }
 }
-
-.comment-section {
-  padding: 0.5rem;
-  font-family: avenir-Next-reg;
-  margin-left: auto;
-  margin-right: auto;
+.shows__shows-bar-wide {
+  display: flex;
+  color: #afafaf;
+  font-weight: 600;
+  gap: 60%;
+  padding-right: 64%;
 }
 @media screen and (max-width: 767px) {
-  .comment-section {
-    width: 90%;
+  .shows__shows-bar-wide {
+    display: none;
   }
 }
+.shows__individual-show {
+  border-bottom: 1px solid #e1e1e1;
+}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .comment-section {
-    width: 70%;
+  .shows__individual-show {
+    display: flex;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1280px) {
-  .comment-section {
-    width: 40%;
+  .shows__individual-show {
+    display: flex;
+    justify-content: space-between;
   }
 }
-.comment-section__form {
-  border-bottom: 1px solid #e1e1e1;
-}
-.comment-section__form__name-label-a {
+.shows__individual-show__label {
   color: #afafaf;
-  margin-left: 4.2rem;
-  font-weight: 700;
-  margin-top: 12px;
 }
-.comment-section__form__image-commentername {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__individual-show__label {
+    display: none;
+  }
 }
-.comment-section__form__image-commentername__image {
-  width: 36px;
-  height: 36px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-radius: 50%;
+@media screen and (min-width: 1280px) {
+  .shows__individual-show__label {
+    display: none;
+  }
 }
-.comment-section__form__image-commentername__textbox {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  width: 100%;
-  height: 36px;
-  border-color: #e1e1e1;
-  border-style: solid;
-  border-radius: 4px;
-  padding: 0.375rem;
+.shows__individual-show__data {
+  padding: 0.25rem;
+  width: 26%;
 }
-.comment-section__form__submission-comment {
-  border-bottom: 1px solid #e1e1e1;
-  display: flex;
-  flex-direction: column;
-  margin-left: 4.2rem;
-  margin-bottom: 12px;
-}
-.comment-section__form__submission-comment__label-b {
-  color: #afafaf;
+.shows__individual-show__data__date {
+  font-size: 1.25rem;
   font-weight: 700;
 }
-.comment-section__form__submission-comment__textbox {
-  height: 100px;
-  border-color: #e1e1e1;
-  border-style: solid;
-  border-radius: 4px;
-  margin-bottom: 12px;
-  margin-top: 4px;
-  padding: 0.375rem;
-  text-align: left;
-  vertical-align: top;
+.shows__individual-show__data__others {
+  font-size: 1.25rem;
 }
-.comment-section__form__submission-comment__send-button {
-  height: 40px;
-  border-color: #323232;
-  border-style: solid;
-  background-color: #323232;
+.shows__individual-show__buy-tickets {
   color: #fafafa;
-  border-radius: 4px;
-}
-.comment-section__comments__article {
-  border-bottom: 1px solid #e1e1e1;
-  display: flex;
-}
-.comment-section__comments__article__image {
-  width: 36px;
-  height: 36px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 0.5rem;
-  border-radius: 50%;
-}
-.comment-section__comments__article__headerdate {
-  display: flex;
-  justify-content: space-between;
-}
-.comment-section__comments__article__headerdate__date {
-  color: #afafaf;
-}
-.comment-section__comments__article__text {
+  background-color: #323232;
+  border-radius: 5px;
   width: 100%;
+  height: 3rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__individual-show__buy-tickets {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__individual-show__buy-tickets {
+    width: 30%;
+  }
+}
+.shows__individual-show:hover {
+  background-color: #fafafa;
+}
+.shows__individual-show--clicked {
+  background-color: #e1e1e1;
 }
 
 .footer {
@@ -553,4 +454,16 @@ header .picture-title {
   .footer__logo--widescreen {
     display: none;
   }
-}/*# sourceMappingURL=bio.css.map */
+}
+
+/*&--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;*//*# sourceMappingURL=shows.css.map */
