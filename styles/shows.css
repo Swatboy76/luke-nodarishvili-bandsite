@@ -316,15 +316,17 @@ header .picture-title {
   font-size: 1.25rem;
 }
 .shows__individual-show__buy-tickets {
+  color: #fafafa;
   background-color: #323232;
   border-radius: 5px;
   width: 100%;
+  height: 3rem;
 }
 .shows__individual-show:hover {
   background-color: #fafafa;
 }
 .shows__individual-show--clicked {
-  background-color: #323232;
+  background-color: #e1e1e1;
 }
 
 .footer {
