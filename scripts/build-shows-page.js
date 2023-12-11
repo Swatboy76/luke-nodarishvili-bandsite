@@ -101,6 +101,6 @@ function displayShows() {
   }
 }
 displayShows();
-function changeColor(element) {
-  element.classList.toggle("shows__individual-show--clicked");
-}
+//function changeColor(element) {
+//  element.classList.toggle("shows__individual-show--clicked");
+//}
