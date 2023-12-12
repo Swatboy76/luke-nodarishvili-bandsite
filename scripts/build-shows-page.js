@@ -95,12 +95,7 @@ function displayShows() {
     createdArticle.appendChild(div3HTML);
     createdArticle.appendChild(buttonHTML);
 
-    console.log(createdArticle);
-
     targetHTML.appendChild(createdArticle);
   }
 }
 displayShows();
-//function changeColor(element) {
-//  element.classList.toggle("shows__individual-show--clicked");
-//}

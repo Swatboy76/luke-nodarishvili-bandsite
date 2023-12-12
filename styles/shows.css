@@ -174,7 +174,14 @@ header .topbar__picture__heading {
 }
 @media screen and (min-width: 1280px) {
   header .topbar__picture__heading {
-    left: 8rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+  header .topbar__picture__heading__music-embed {
+    width: 50%;
   }
 }
 header .topbar__img {
@@ -290,6 +297,15 @@ header .picture-title {
   .shows {
     display: flex;
   }
+  .shows__title {
+    padding-right: 1rem;
+    padding-left: 5rem;
+  }
+  .shows__computer-screen {
+    padding-top: 10%;
+    width: 82%;
+    padding-right: 5rem;
+  }
 }
 .shows__shows-bar-wide {
   display: flex;
@@ -310,12 +326,14 @@ header .picture-title {
   .shows__individual-show {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__individual-show {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .shows__individual-show__label {
@@ -333,7 +351,7 @@ header .picture-title {
 }
 .shows__individual-show__data {
   padding: 0.25rem;
-  width: 26%;
+  width: 45%;
 }
 .shows__individual-show__data__date {
   font-size: 1.25rem;

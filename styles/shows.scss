@@ -153,7 +153,14 @@ header {
           left: 2rem;
         }
         @include computerscreen {
-          left: 8rem;
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10%;
+          &__music-embed {
+            width: 50%;
+          }
         }
       }
     }
@@ -250,6 +257,15 @@ header {
   }
   @include computerscreen {
     display: flex;
+    &__title {
+      padding-right: 1rem;
+      padding-left: 5rem;
+    }
+    &__computer-screen {
+      padding-top: 10%;
+      width: 82%;
+      padding-right: 5rem;
+    }
   }
   &__shows-bar-wide {
     display: flex;
@@ -267,10 +283,12 @@ header {
     @include tabletscreen {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     @include computerscreen {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     &__label {
       color: #afafaf;
@@ -284,7 +302,7 @@ header {
     }
     &__data {
       padding: 0.25rem;
-      width: 26%;
+      width: 45%;
 
       &__date {
         font-size: 1.25rem;
