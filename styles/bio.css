@@ -290,7 +290,7 @@ header .picture-title {
 .musicians-article__img {
   margin: 1rem;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: auto;
   display: block;
@@ -563,4 +563,4 @@ header .picture-title {
   .footer__logo--widescreen {
     display: none;
   }
-}/*# sourceMappingURL=bio.css.map */
+} /*# sourceMappingURL=bio.css.map */
