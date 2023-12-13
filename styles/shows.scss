@@ -4,6 +4,7 @@
 @use "./partials/footerstyle.scss" as *;
 
 header {
+  //may need to fix Ask to go though it in detail with the staff. Remove comment when fixed
   background-color: $footer-header-colour;
   color: $footer-header-colour-text;
 
@@ -128,6 +129,7 @@ header {
 }
 
 .shows {
+  //may need to fix Ask to go though it in detail with the staff. Remove comment when fixed
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
@@ -213,5 +215,4 @@ header {
   &__individual-show--clicked {
     background-color: #e1e1e1;
   }
-  //article here
 }

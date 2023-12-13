@@ -117,7 +117,7 @@ header {
       padding: 10rem; //computer format, no fixed number so i thew in 160px
     }
   }
-} //may need to fix Ask to go though it in detail with the staff
+} //may need to fix Ask to go though it in detail with the staff. Remove comment when fixed
 
 .musicians-article {
   margin: 1rem;
@@ -291,6 +291,7 @@ header {
         margin-right: 1rem;
         margin-top: 0.5rem;
         border-radius: 50%;
+        background-color: #e1e1e1;
       }
       &__headerdate {
         &__date {
@@ -304,4 +305,4 @@ header {
       }
     }
   }
-} //may need to fix Ask to go though it in detail with the staff
+} //may need to fix Ask to go though it in detail with the staff. Remove comment when fixed

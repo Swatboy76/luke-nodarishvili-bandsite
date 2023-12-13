@@ -530,6 +530,7 @@ header .picture-title {
   margin-right: 1rem;
   margin-top: 0.5rem;
   border-radius: 50%;
+  background-color: #e1e1e1;
 }
 .comment-section__comments__article__headerdate {
   display: flex;

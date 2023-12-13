@@ -88,11 +88,12 @@ function loadComments() {
 
     let profilepPictureSrc = userComments[i].profilepPicture;
     let profilepPictureHTML = document.createElement("img"); //if profilepPicture is blank/set to N/A it will simply use the backup
-    profilepPictureHTML.setAttribute("src", profilepPictureSrc);
+    if (profilepPictureSrc !== "N/A") {
+      profilepPictureHTML.setAttribute("src", profilepPictureSrc); //if PFP is missing (Set to N/A) this will not activate. putting a placeholder instead
+    }
     profilepPictureHTML.classList.add(
       "comment-section__comments__article__image"
     );
-
     //Adding the Divs and P tags together and then formating
 
     headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons
