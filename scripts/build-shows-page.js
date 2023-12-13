@@ -35,66 +35,74 @@ function displayShows() {
   for (let i = 0; i < showsList.length; i++) {
     let createdArticle = document.createElement("article"); //makes the main article box, and adds the on-click system
     createdArticle.classList.add("shows__individual-show");
+
+    // Highlighting section
+    document.addEventListener("click", function (event) {
+      if (!createdArticle.contains(event.target)) {
+        createdArticle.classList.remove("shows__individual-show--clicked");
+      }
+    });
     createdArticle.onclick = function () {
       createdArticle.classList.toggle("shows__individual-show--clicked");
     }; //this was recomended to me via research
 
-    //1St Div (Reuse as needed)
-    let div1HTML = document.createElement("div"); //makes the 1st div
-    div1HTML.classList.add("shows__individual-show__data");
+    //1St Div (Reuse as needed) Date
+    let dateHTML = document.createElement("div"); //makes the 1st div
+    dateHTML.classList.add("shows__individual-show__data");
 
-    let div1name = document.createElement("p"); //makes the P tag to put the string into
-    div1name.innerText = "DATE"; //Change
-    div1name.classList.add("shows__individual-show__label");
-    div1HTML.appendChild(div1name); // adds the "DATE" to the div
+    let dateName = document.createElement("p"); //makes the P tag to put the string into
+    dateName.innerText = "DATE"; //Change
+    dateName.classList.add("shows__individual-show__label");
+    dateHTML.appendChild(dateName); // adds the "DATE" to the div
 
-    let div1data = showsList[i].date; //Change
-    let div1dataHTML = document.createElement("p");
-    div1dataHTML.innerText = div1data; //puts the data (text) into the P tag
-    div1dataHTML.classList.add("shows__individual-show__data__date");
-    div1HTML.appendChild(div1dataHTML); // adds the data (text) to the div
+    let dateData = showsList[i].date; //Change
+    let dateDataHTML = document.createElement("p");
+    dateDataHTML.innerText = dateData; //puts the data (text) into the P tag
+    dateDataHTML.classList.add("shows__individual-show__data__date");
+    dateHTML.appendChild(dateDataHTML); // adds the data (text) to the div
 
-    //2nd Div (Reuse as needed)
-    let div2HTML = document.createElement("div"); //makes the 1st div
-    div2HTML.classList.add("shows__individual-show__data");
+    //2nd Div (Reuse as needed) Venue
+    let venueHTML = document.createElement("div"); //makes the 1st div
+    venueHTML.classList.add("shows__individual-show__data");
 
-    let div2name = document.createElement("p"); //makes the P tag to put the string into
-    div2name.innerText = "VENUE"; //Change
-    div2name.classList.add("shows__individual-show__label");
-    div2HTML.appendChild(div2name); // adds the "DATE" to the div
+    let venueName = document.createElement("p"); //makes the P tag to put the string into
+    venueName.innerText = "VENUE"; //Change
+    venueName.classList.add("shows__individual-show__label");
+    venueHTML.appendChild(venueName); // adds the "VENUE" to the div
 
-    let div2data = showsList[i].venue; //Change
-    let div2dataHTML = document.createElement("p");
-    div2dataHTML.innerText = div2data; //puts the data (text) into the P tag
-    div2dataHTML.classList.add("shows__individual-show__data__other");
-    div2HTML.appendChild(div2dataHTML); // adds the data (text) to the div
+    let venueData = showsList[i].venue; //Change
+    let venueDataHTML = document.createElement("p");
+    venueDataHTML.innerText = venueData; //puts the data (text) into the P tag
+    venueDataHTML.classList.add("shows__individual-show__data__other");
+    venueHTML.appendChild(venueDataHTML); // adds the data (text) to the div
 
-    //3rd Div (Reuse as needed)
-    let div3HTML = document.createElement("div"); //makes the 1st div
-    div3HTML.classList.add("shows__individual-show__data");
+    //3rd Div (Reuse as needed) Loc
+    let LocationHTML = document.createElement("div"); //makes the 1st div
+    LocationHTML.classList.add("shows__individual-show__data");
 
-    let div3name = document.createElement("p"); //makes the P tag to put the string into
-    div3name.innerText = "LOCATION"; //Change
-    div3name.classList.add("shows__individual-show__label");
-    div3HTML.appendChild(div3name); // adds the "DATE" to the div
+    let LocationName = document.createElement("p"); //makes the P tag to put the string into
+    LocationName.innerText = "LOCATION";
+    LocationName.classList.add("shows__individual-show__label");
+    LocationHTML.appendChild(LocationName); // adds the "LOCATION" to the div
 
-    let div3data = showsList[i].location; //Change
-    let div3dataHTML = document.createElement("p");
-    div3dataHTML.innerText = div3data; //puts the data (text) into the P tag
-    div3dataHTML.classList.add("shows__individual-show__data__other");
-    div3HTML.appendChild(div3dataHTML); // adds the data (text) to the div
+    let LocationData = showsList[i].location;
+    let LocationDataHTML = document.createElement("p");
+    LocationDataHTML.innerText = LocationData; //puts the data (text) into the P tag
+    LocationDataHTML.classList.add("shows__individual-show__data__other");
+    LocationHTML.appendChild(LocationDataHTML); // adds the data (text) to the div
 
-    //button
+    //button maker
     let buttonHTML = document.createElement("button");
     buttonHTML.classList.add("shows__individual-show__buy-tickets");
     buttonHTML.innerText = "BUY TICKETS";
 
-    //Add all elements together
-    createdArticle.appendChild(div1HTML);
-    createdArticle.appendChild(div2HTML);
-    createdArticle.appendChild(div3HTML);
+    // Add all elements together (ORDER IS IMPORTANT, FUTURE PROGRAMER)
+    createdArticle.appendChild(dateHTML);
+    createdArticle.appendChild(venueHTML);
+    createdArticle.appendChild(LocationHTML);
     createdArticle.appendChild(buttonHTML);
 
+    // Final product is added
     targetHTML.appendChild(createdArticle);
   }
 }
