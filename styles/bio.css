@@ -12,6 +12,7 @@
 }
 body {
   margin: 0;
+  font-family: avenir-Next-Reg;
 }
 @media screen and (max-width: 767px) {
   body h1 {
@@ -36,7 +37,6 @@ body {
     font-size: 1rem;
     line-height: 1.125rem;
     font-weight: 400;
-    font-family: avenir-Next-Reg;
   }
   body footer {
     font-size: 0.813rem;
@@ -250,18 +250,18 @@ header .topbar {
 header .topbar__picture {
   position: relative;
 }
-header .topbar__picture h1 {
+header .topbar__picture__header {
   position: absolute;
   top: 34%;
   left: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar__picture h1 {
+  header .topbar__picture__header {
     left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar__picture h1 {
+  header .topbar__picture__header {
     left: 8rem;
   }
 }

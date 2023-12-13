@@ -1,4 +1,4 @@
-@use "./partials/variables&fonts.scss" as *;
+@use "./partials/variables.scss" as *;
 @use "./partials/breakpoints.scss" as *;
 @use "./partials/bodystyle.scss" as *;
 @use "./partials/footerstyle.scss" as *;
@@ -25,7 +25,7 @@ header {
     }
     &__picture {
       position: relative;
-      h1 {
+      &__header {
         position: absolute;
         top: 34%;
         left: 1rem;

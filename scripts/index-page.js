@@ -17,7 +17,7 @@ let userComments = [
     profilepPicture: "N/A",
     txt: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
-];
+]; // Dev note: API will only replace this array, No other changes will be needed (Or could use this array as a RAM analouge)
 
 document.getElementById("form-all").addEventListener("submit", displayComments);
 
@@ -31,9 +31,9 @@ function displayComments(event) {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }); //was suggested this by the internet
+  });
 
-  let profilepPictureSrc = "n/a"; //userComments[i].profilepPicture;
+  let profilepPictureSrc = "n/a";
 
   let commentText = document.getElementById("form-comment").value;
 

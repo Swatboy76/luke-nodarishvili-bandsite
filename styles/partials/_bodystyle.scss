@@ -1,7 +1,9 @@
 @use "./breakpoints.scss" as *;
+@use "./fonts.scss" as *;
 
 body {
   margin: 0; //ask how to make this less important so that it can be overridden
+  font-family: avenir-Next-Reg;
   @include phonescreen {
     h1 {
       font-size: 2rem;
@@ -25,7 +27,6 @@ body {
       font-size: 1rem;
       line-height: 1.125rem;
       font-weight: 400;
-      font-family: avenir-Next-Reg;
     }
     footer {
       font-size: 0.813rem;

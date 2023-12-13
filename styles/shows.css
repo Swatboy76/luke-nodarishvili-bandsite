@@ -12,6 +12,7 @@
 }
 body {
   margin: 0;
+  font-family: avenir-Next-Reg;
 }
 @media screen and (max-width: 767px) {
   body h1 {
@@ -36,7 +37,6 @@ body {
     font-size: 1rem;
     line-height: 1.125rem;
     font-weight: 400;
-    font-family: avenir-Next-Reg;
   }
   body footer {
     font-size: 0.813rem;
