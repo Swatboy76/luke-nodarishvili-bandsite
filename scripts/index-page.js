@@ -19,7 +19,7 @@ let userComments = [
   },
 ];
 
-document.getElementById("form-all").onsubmit = displayComments;
+document.getElementById("form-all").addEventListener("submit", displayComments);
 
 function displayComments(event) {
   event.preventDefault();
