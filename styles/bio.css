@@ -131,6 +131,96 @@ body {
   }
 }
 
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__header--left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+.footer__socials img {
+  width: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__body {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.footer__body-details {
+  margin: 2rem 0;
+}
+.footer__body-details--name h3 {
+  margin: 0;
+}
+.footer__body-details--address {
+  margin: 1rem 0;
+}
+.footer__body-details--address p {
+  margin: 0;
+}
+.footer__logo {
+  width: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo--widescreen {
+    display: none;
+  }
+}
+
 header {
   background-color: #323232;
   color: #ffffff;
@@ -290,7 +380,7 @@ header .picture-title {
 .musicians-article__img {
   margin: 1rem;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: auto;
   display: block;
@@ -307,19 +397,13 @@ header .picture-title {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .musicians-article__paragraph {
     display: flex;
-  }
-  .musicians-article__paragraph__text {
-    display: flex;
-    margin: 1rem;
+    gap: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .musicians-article__paragraph {
     display: flex;
-  }
-  .musicians-article__paragraph__text {
-    display: flex;
-    margin: 1rem;
+    gap: 1rem;
   }
 }
 
@@ -473,94 +557,4 @@ header .picture-title {
 }
 .comment-section__comments__article__text {
   width: 100%;
-}
-
-.footer {
-  background-color: #323232;
-  padding: 1rem;
-  color: #ffffff;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footer__header {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__header {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footer__header--left {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footer__header--left {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__header--left {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-}
-.footer__socials {
-  display: flex;
-  gap: 2rem;
-}
-.footer__socials img {
-  width: 30px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footer__body {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__body {
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-  }
-}
-.footer__body-details {
-  margin: 2rem 0;
-}
-.footer__body-details--name h3 {
-  margin: 0;
-}
-.footer__body-details--address {
-  margin: 1rem 0;
-}
-.footer__body-details--address p {
-  margin: 0;
-}
-.footer__logo {
-  width: 120px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footer__logo--mobile {
-    display: none;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__logo--mobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footer__logo--widescreen {
-    display: none;
-  }
-} /*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=bio.css.map */

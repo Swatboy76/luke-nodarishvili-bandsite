@@ -117,7 +117,7 @@ header {
       padding: 10rem; //computer format, no fixed number so i thew in 160px
     }
   }
-}
+} //may need to fix Ask to go though it in detail with the staff
 
 .musicians-article {
   margin: 1rem;
@@ -150,17 +150,11 @@ header {
   &__paragraph {
     @include tabletscreen {
       display: flex;
-      &__text {
-        display: flex;
-        margin: 1rem;
-      }
+      gap: 1rem;
     }
     @include computerscreen {
       display: flex;
-      &__text {
-        display: flex;
-        margin: 1rem;
-      }
+      gap: 1rem;
     }
   }
 }
@@ -310,4 +304,4 @@ header {
       }
     }
   }
-}
+} //may need to fix Ask to go though it in detail with the staff

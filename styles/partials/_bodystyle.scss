@@ -1,3 +1,5 @@
+@use "./breakpoints.scss" as *;
+
 body {
   margin: 0; //ask how to make this less important so that it can be overridden
   @include phonescreen {
