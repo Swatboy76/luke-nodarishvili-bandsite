@@ -34,66 +34,66 @@ const targetHTML = document.getElementById("showsDiv");
 function displayShows() {
   for (let i = 0; i < showsList.length; i++) {
     let createdArticle = document.createElement("article"); //makes the main article box, and adds the on-click system
-    createdArticle.classList.add("shows__individual-show");
+    createdArticle.classList.add("individual-show");
 
     // Highlighting section
     document.addEventListener("click", function (event) {
       if (!createdArticle.contains(event.target)) {
-        createdArticle.classList.remove("shows__individual-show--clicked");
+        createdArticle.classList.remove("individual-show--clicked");
       }
     });
     createdArticle.onclick = function () {
-      createdArticle.classList.toggle("shows__individual-show--clicked");
+      createdArticle.classList.toggle("individual-show--clicked");
     }; //this was recomended to me via research
 
     //1St Div (Reuse as needed) Date
     let dateHTML = document.createElement("div"); //makes the 1st div
-    dateHTML.classList.add("shows__individual-show__data");
+    dateHTML.classList.add("individual-show__data");
 
     let dateName = document.createElement("p"); //makes the P tag to put the string into
     dateName.innerText = "DATE"; //Change
-    dateName.classList.add("shows__individual-show__label");
+    dateName.classList.add("individual-show__label");
     dateHTML.appendChild(dateName); // adds the "DATE" to the div
 
     let dateData = showsList[i].date; //Change
     let dateDataHTML = document.createElement("p");
     dateDataHTML.innerText = dateData; //puts the data (text) into the P tag
-    dateDataHTML.classList.add("shows__individual-show__data__date");
+    dateDataHTML.classList.add("individual-show__data__date");
     dateHTML.appendChild(dateDataHTML); // adds the data (text) to the div
 
     //2nd Div (Reuse as needed) Venue
     let venueHTML = document.createElement("div"); //makes the 1st div
-    venueHTML.classList.add("shows__individual-show__data");
+    venueHTML.classList.add("individual-show__data");
 
     let venueName = document.createElement("p"); //makes the P tag to put the string into
     venueName.innerText = "VENUE"; //Change
-    venueName.classList.add("shows__individual-show__label");
+    venueName.classList.add("individual-show__label");
     venueHTML.appendChild(venueName); // adds the "VENUE" to the div
 
     let venueData = showsList[i].venue; //Change
     let venueDataHTML = document.createElement("p");
     venueDataHTML.innerText = venueData; //puts the data (text) into the P tag
-    venueDataHTML.classList.add("shows__individual-show__data__other");
+    venueDataHTML.classList.add("individual-show__data__other");
     venueHTML.appendChild(venueDataHTML); // adds the data (text) to the div
 
     //3rd Div (Reuse as needed) Loc
     let LocationHTML = document.createElement("div"); //makes the 1st div
-    LocationHTML.classList.add("shows__individual-show__data");
+    LocationHTML.classList.add("individual-show__data");
 
     let LocationName = document.createElement("p"); //makes the P tag to put the string into
     LocationName.innerText = "LOCATION";
-    LocationName.classList.add("shows__individual-show__label");
+    LocationName.classList.add("individual-show__label");
     LocationHTML.appendChild(LocationName); // adds the "LOCATION" to the div
 
     let LocationData = showsList[i].location;
     let LocationDataHTML = document.createElement("p");
     LocationDataHTML.innerText = LocationData; //puts the data (text) into the P tag
-    LocationDataHTML.classList.add("shows__individual-show__data__other");
+    LocationDataHTML.classList.add("individual-show__data__other");
     LocationHTML.appendChild(LocationDataHTML); // adds the data (text) to the div
 
     //button maker
     let buttonHTML = document.createElement("button");
-    buttonHTML.classList.add("shows__individual-show__buy-tickets");
+    buttonHTML.classList.add("individual-show__buy-tickets");
     buttonHTML.innerText = "BUY TICKETS";
 
     // Add all elements together (ORDER IS IMPORTANT, FUTURE PROGRAMER)

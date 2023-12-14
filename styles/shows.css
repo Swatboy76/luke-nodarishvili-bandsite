@@ -198,7 +198,7 @@ header .topbar {
 header .topbar__picture {
   position: relative;
 }
-header .topbar__picture__heading {
+header .topbar__heading {
   position: absolute;
   top: 4%;
   padding: 0px 4% 0 4%;
@@ -206,19 +206,19 @@ header .topbar__picture__heading {
   width: fit-content;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar__picture__heading {
+  header .topbar__heading {
     left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar__picture__heading {
+  header .topbar__heading {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
   }
-  header .topbar__picture__heading__music-embed {
+  header .topbar__heading__music-embed {
     width: 50%;
   }
 }
@@ -341,7 +341,7 @@ header .picture-title {
     padding-left: 5rem;
   }
   .shows__computer-screen {
-    padding-top: 10%;
+    padding-top: 3rem;
     width: 82%;
     padding-right: 5rem;
   }
@@ -358,48 +358,59 @@ header .picture-title {
     display: none;
   }
 }
-.shows__individual-show {
+.shows .individual-show:hover {
+  background-color: #fafafa;
+}
+.shows .individual-show--clicked {
+  background-color: #e1e1e1;
+}
+
+.individual-show {
+  padding-bottom: 1rem;
   border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .shows__individual-show {
+  .individual-show {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__individual-show {
+  .individual-show {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-.shows__individual-show__label {
+.individual-show__label {
   color: #afafaf;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .shows__individual-show__label {
+  .individual-show__label {
     display: none;
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__individual-show__label {
+  .individual-show__label {
     display: none;
   }
 }
-.shows__individual-show__data {
+.individual-show__data {
   padding: 0.25rem;
   width: 45%;
 }
-.shows__individual-show__data__date {
+.individual-show__data--date {
   font-size: 1.25rem;
   font-weight: 700;
 }
-.shows__individual-show__data__others {
+.individual-show__data--others {
   font-size: 1.25rem;
 }
-.shows__individual-show__buy-tickets {
+.individual-show__buy-tickets {
+  font-family: avenir-Next-Reg;
+  border-style: solid;
+  border-color: #323232;
   color: #fafafa;
   background-color: #323232;
   border-radius: 5px;
@@ -407,18 +418,12 @@ header .picture-title {
   height: 3rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .shows__individual-show__buy-tickets {
+  .individual-show__buy-tickets {
     width: 30%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__individual-show__buy-tickets {
+  .individual-show__buy-tickets {
     width: 30%;
   }
-}
-.shows__individual-show:hover {
-  background-color: #fafafa;
-}
-.shows__individual-show--clicked {
-  background-color: #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */
