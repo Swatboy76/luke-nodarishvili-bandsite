@@ -233,18 +233,18 @@ header .topbar {
 header .topbar__picture {
   position: relative;
 }
-header .topbar__picture__header {
+header .topbar__header {
   position: absolute;
   top: 34%;
   left: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  header .topbar__picture__header {
+  header .topbar__header {
     left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  header .topbar__picture__header {
+  header .topbar__header {
     left: 8rem;
   }
 }

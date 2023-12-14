@@ -25,18 +25,19 @@ header {
     }
     &__picture {
       position: relative;
-      &__header {
-        position: absolute;
-        top: 34%;
-        left: 1rem;
-        @include tabletscreen {
-          left: 2rem;
-        }
-        @include computerscreen {
-          left: 8rem;
-        }
+    }
+    &__header {
+      position: absolute;
+      top: 34%;
+      left: 1rem;
+      @include tabletscreen {
+        left: 2rem;
+      }
+      @include computerscreen {
+        left: 8rem;
       }
     }
+
     &__img {
       margin-top: $mobile-margin-16;
       margin-bottom: $mobile-margin-16;
