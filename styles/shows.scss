@@ -118,10 +118,8 @@ header {
     display: flex;
     align-items: center;
     opacity: 60%;
-    @include phonescreen {
-      height: 22rem;
-      padding: $mobile-margin-16;
-    }
+    height: 22rem;
+    padding: $mobile-margin-16;
     @include tabletscreen {
       height: 52vh;
       padding: $tablet-or-computer-margin-48;
@@ -134,7 +132,6 @@ header {
 }
 
 .shows {
-  //may need to fix Ask to go though it in detail with the staff. Remove comment when fixed
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;

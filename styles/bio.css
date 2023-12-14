@@ -19,97 +19,66 @@ body h1 {
   line-height: 2rem;
   font-weight: 700;
 }
-body h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-}
-body h3 {
-  font-size: 0.813rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-}
-body p {
-  font-size: 1rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-body footer {
-  font-size: 0.813rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-}
-body a,
-body button {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   body h1 {
     font-size: 2.5rem;
     line-height: 4.25rem;
-    font-weight: 700;
-  }
-  body h2 {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 600;
-  }
-  body h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-  }
-  body p {
-    font-size: 1rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-  }
-  body footer {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-  }
-  body a,
-  body button {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-weight: 700;
   }
 }
 @media screen and (min-width: 1280px) {
   body h1 {
     font-size: 4rem;
     line-height: 4.25rem;
-    font-weight: 700;
   }
+}
+body h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   body h2 {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 600;
   }
+}
+body h3 {
+  font-size: 0.813rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   body h3 {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
   }
+}
+body p {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   body p {
-    font-size: 1rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
+}
+body footer {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   body footer {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 400;
   }
-  body a,
-  body button {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-  }
+}
+body a,
+body button {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 700;
 }
 
 .footer {
@@ -328,12 +297,8 @@ header {
   display: flex;
   align-items: center;
   opacity: 60%;
-}
-@media screen and (max-width: 767px) {
-  .picture-title {
-    height: 30vh;
-    padding: 1rem;
-  }
+  height: 30vh;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .picture-title {
@@ -408,13 +373,9 @@ header {
 }
 .photo-gallery img {
   margin: 1rem;
-}
-@media screen and (max-width: 767px) {
-  .photo-gallery img {
-    width: 96%;
-    display: flex;
-    justify-content: center;
-  }
+  width: 96%;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery img {
@@ -432,15 +393,11 @@ header {
 }
 
 .community {
+  width: 90%;
   padding: 0.5rem;
   font-family: avenir-Next-reg;
   margin-left: auto;
   margin-right: auto;
-}
-@media screen and (max-width: 767px) {
-  .community {
-    width: 90%;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .community {

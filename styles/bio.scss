@@ -115,10 +115,9 @@ header {
   display: flex;
   align-items: center;
   opacity: 60%;
-  @include phonescreen {
-    height: 30vh;
-    padding: $mobile-margin-16;
-  }
+  height: 30vh;
+  padding: $mobile-margin-16;
+
   @include tabletscreen {
     height: 48vh;
     padding: $tablet-or-computer-margin-48;
@@ -183,13 +182,10 @@ header {
     flex-wrap: wrap;
   }
   img {
-    //talk to argen about this
     margin: 1rem;
-    @include phonescreen {
-      width: 96%;
-      display: flex;
-      justify-content: center;
-    }
+    width: 96%;
+    display: flex;
+    justify-content: center;
     @include tabletscreen {
       width: 28%;
       display: flex;
@@ -205,9 +201,7 @@ header {
 
 // --lower center--
 .community {
-  @include phonescreen {
-    width: 90%;
-  }
+  width: 90%;
   @include tabletscreen {
     width: 70%;
   }
