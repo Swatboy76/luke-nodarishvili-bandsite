@@ -17,7 +17,7 @@ let userComments = [
     profilepPicture: "N/A",
     txt: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
-]; // Dev note: API will only replace this array, No other changes will be needed (Or could use this array as a RAM analouge)
+]; // Dev note: API will only replace this array, Probably gona reprogram display comments to save comments (Or could use this array as a RAM analouge)
 
 document.getElementById("form-all").addEventListener("submit", displayComments);
 
@@ -56,17 +56,15 @@ function loadComments() {
   targetHTML.innerHTML = "";
   for (let i = 0; i < userComments.length; i++) {
     let createdArticle = document.createElement("article"); //makes the main article box
-    createdArticle.classList.add("comment-section__comments__article"); // adds CSS class to the box
+    createdArticle.classList.add("comment"); // adds CSS class to the box
     //in logic we add the image to this, THEN after add the next line:
 
     let articleHTML = document.createElement("div"); //makes the text div
-    articleHTML.classList.add("comment-section__comments__article__text");
+    articleHTML.classList.add("comment__main");
     //in logic once the text div is made we then put in the header__date div in:
 
     let headerdateDiv = document.createElement("div"); //makes the username and date div
-    headerdateDiv.classList.add(
-      "comment-section__comments__article__headerdate"
-    );
+    headerdateDiv.classList.add("comment__header");
     //then only after do we add the comment text
 
     //Making variables and HTML for adding to the above Divs
@@ -77,9 +75,7 @@ function loadComments() {
 
     let dateText = userComments[i].date;
     let dateHTML = document.createElement("p");
-    dateHTML.classList.add(
-      "comment-section__comments__article__headerdate__date"
-    );
+    dateHTML.classList.add("comment__header--date");
     dateHTML.innerText = dateText;
 
     let commentText = userComments[i].txt;
@@ -91,9 +87,7 @@ function loadComments() {
     if (profilepPictureSrc !== "N/A") {
       profilepPictureHTML.setAttribute("src", profilepPictureSrc); //if PFP is missing (Set to N/A) this will not activate. putting a placeholder instead
     }
-    profilepPictureHTML.classList.add(
-      "comment-section__comments__article__image"
-    );
+    profilepPictureHTML.classList.add("comment__image");
     //Adding the Divs and P tags together and then formating
 
     headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons

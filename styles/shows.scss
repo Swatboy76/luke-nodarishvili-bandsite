@@ -85,6 +85,11 @@ header {
       }
       /*#################################### NAV LINKS ####################################*/
     }
+    &__unorderedlist {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
     &__link {
       text-decoration: none;
       color: $footer-header-colour-text;
