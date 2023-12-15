@@ -1,3 +1,6 @@
+/*todo list of things to do:
+ - call 
+*/
 let userComments = [
   {
     name: "Connor Walton",
@@ -31,7 +34,7 @@ function displayComments(event) {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  });
+  }); //needs to be set to use timestamps, unix ones, as the date section will be modified to do the same
 
   let profilepPictureSrc = "n/a";
 
@@ -73,12 +76,12 @@ function loadComments() {
     let nameHTML = document.createElement("p"); //makes the P tag to put the string into
     nameHTML.innerText = nameText; //puts the string into the P tag inside the "box" so it can be used later.
 
-    let dateText = userComments[i].date;
+    let dateText = userComments[i].date; // needs modification to convert from Unix to human time
     let dateHTML = document.createElement("p");
     dateHTML.classList.add("comment__header--date");
     dateHTML.innerText = dateText;
 
-    let commentText = userComments[i].txt;
+    let commentText = userComments[i].txt; // needs modification for output of API
     let commentHTML = document.createElement("p");
     commentHTML.innerText = commentText;
 
@@ -88,8 +91,9 @@ function loadComments() {
       profilepPictureHTML.setAttribute("src", profilepPictureSrc); //if PFP is missing (Set to N/A) this will not activate. putting a placeholder instead
     }
     profilepPictureHTML.classList.add("comment__image");
-    //Adding the Divs and P tags together and then formating
+    // musti be modified ... somehow?
 
+    //Adding the Divs and P tags together and then formating
     headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons
     headerdateDiv.appendChild(dateHTML);
 
