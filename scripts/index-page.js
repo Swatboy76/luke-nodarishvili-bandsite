@@ -1,27 +1,13 @@
-/*todo list of things to do:
- - call 
-*/
-let userComments = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    profilepPicture: "N/A",
-    txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    profilepPicture: "N/A",
-    txt: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    profilepPicture: "N/A",
-    txt: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-]; // Dev note: API will only replace this array, Probably gona reprogram display comments to save comments (Or could use this array as a RAM analouge)
+import bandSiteAPI from "./band-site-api.js";
 
+const bandsiteAPI = new bandSiteAPI();
+
+const getData = async () => {
+  console.log(bandSiteAPI);
+  let userComments = await bandsiteAPI.getComments();
+
+  loadComments(userComments);
+};
 document.getElementById("form-all").addEventListener("submit", displayComments);
 
 function displayComments(event) {
@@ -42,19 +28,17 @@ function displayComments(event) {
 
   let newComment = {
     name: nameText,
-    date: dateText,
-    profilepPicture: profilepPictureSrc,
-    txt: commentText,
+    comment: commentText,
   };
 
   userComments.unshift(newComment);
 
-  loadComments();
+  //loadComments();
 
   document.getElementById("form-all").reset();
 }
 
-function loadComments() {
+function loadComments(userComments) {
   const targetHTML = document.getElementById("commentSection");
   targetHTML.innerHTML = "";
   for (let i = 0; i < userComments.length; i++) {
@@ -76,19 +60,19 @@ function loadComments() {
     let nameHTML = document.createElement("p"); //makes the P tag to put the string into
     nameHTML.innerText = nameText; //puts the string into the P tag inside the "box" so it can be used later.
 
-    let dateText = userComments[i].date; // needs modification to convert from Unix to human time
+    let dateText = userComments[i].timestamp; // needs modification to convert from Unix to human time
     let dateHTML = document.createElement("p");
     dateHTML.classList.add("comment__header--date");
     dateHTML.innerText = dateText;
 
-    let commentText = userComments[i].txt; // needs modification for output of API
+    let commentText = userComments[i].comment; // needs modification for output of API
     let commentHTML = document.createElement("p");
     commentHTML.innerText = commentText;
 
     let profilepPictureSrc = userComments[i].profilepPicture;
-    let profilepPictureHTML = document.createElement("img"); //if profilepPicture is blank/set to N/A it will simply use the backup
-    if (profilepPictureSrc !== "N/A") {
-      profilepPictureHTML.setAttribute("src", profilepPictureSrc); //if PFP is missing (Set to N/A) this will not activate. putting a placeholder instead
+    let profilepPictureHTML = document.createElement("img"); //if profilepPicture is blank it will simply use the backup
+    if (profilepPictureSrc == "undefined") {
+      profilepPictureHTML.setAttribute("src", profilepPictureSrc); //if PFP is missing this will not activate. putting a placeholder instead
     }
     profilepPictureHTML.classList.add("comment__image");
     // musti be modified ... somehow?
@@ -105,4 +89,5 @@ function loadComments() {
     targetHTML.appendChild(createdArticle);
   }
 }
-loadComments();
+
+getData();

@@ -40,8 +40,7 @@ header {
         margin-left: auto;
         margin-right: auto;
         margin-top: 10%;
-        &__music-embed {
-          //TO CHECK MARKER ======================================================================================= TO CHECK
+        &-music-embed {
           width: 50%;
         }
       }
@@ -165,7 +164,6 @@ header {
       display: none;
     }
   }
-  //TO FIX MARKER ======================================================================================= TO FIX
   .individual-show:hover {
     background-color: #fafafa;
   }
@@ -213,7 +211,7 @@ header {
     border-style: solid;
     border-color: #323232;
     color: #fafafa;
-    background-color: #323232; //fix size and font colour
+    background-color: #323232;
     border-radius: 5px;
     width: 100%;
     height: 3rem;
