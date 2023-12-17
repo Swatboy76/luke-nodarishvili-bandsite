@@ -24,6 +24,12 @@ body {
     @include tabletscreen {
       font-size: 2.25rem;
       line-height: 2.75rem;
+      font-weight: 700;
+    }
+    @include computerscreen {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
     }
   }
   h3 {
@@ -31,6 +37,10 @@ body {
     line-height: 1.375rem;
     font-weight: 600;
     @include tabletscreen {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    @include computerscreen {
       font-size: 1.5rem;
       line-height: 2rem;
     }
@@ -42,12 +52,19 @@ body {
     @include tabletscreen {
       line-height: 1.375rem;
     }
+    @include computerscreen {
+      line-height: 1.375rem;
+    }
   }
   footer {
     font-size: 0.813rem;
     line-height: 1.25rem;
     font-weight: 400;
     @include tabletscreen {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    @include computerscreen {
       font-size: 0.875rem;
       line-height: 1.25rem;
     }

@@ -40,6 +40,14 @@ body h2 {
   body h2 {
     font-size: 2.25rem;
     line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
   }
 }
 body h3 {
@@ -48,6 +56,12 @@ body h3 {
   font-weight: 600;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   body h3 {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -63,12 +77,23 @@ body p {
     line-height: 1.375rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  body p {
+    line-height: 1.375rem;
+  }
+}
 body footer {
   font-size: 0.813rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  body footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   body footer {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -335,6 +360,12 @@ header {
     margin-right: 7.625rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .musicians-article__contents {
+    margin-left: 7.625rem;
+    margin-right: 7.625rem;
+  }
+}
 .musicians-article__img {
   margin: 1rem;
   -o-object-fit: contain;
@@ -347,9 +378,7 @@ header {
 }
 @media screen and (min-width: 1280px) {
   .musicians-article__img {
-    margin-left: 7.625rem;
-    margin-right: 7.625rem;
-    width: 78%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -452,7 +481,6 @@ header {
   background-color: #fafafa;
 }
 .form__lower {
-  border-bottom: 1px solid #e1e1e1;
   display: flex;
   flex-direction: column;
   margin-left: 4.2rem;
@@ -478,8 +506,20 @@ header {
   border-radius: 0.25rem;
   background-color: #323232;
   color: #fafafa;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .form__lower--submit {
+    width: 30%;
+    margin-left: 70%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form__lower--submit {
+    width: 30%;
+    margin-left: 70%;
+  }
 }
 
 .comment {

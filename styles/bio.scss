@@ -125,7 +125,7 @@ header {
   }
   @include computerscreen {
     height: 48vh;
-    padding: 10rem; //computer format, no fixed number so i thew in 160px
+    padding: 10rem;
   }
 }
 
@@ -140,6 +140,12 @@ header {
     margin-left: 7.625rem;
     margin-right: 7.625rem;
   }
+  &__contents {
+    @include computerscreen {
+      margin-left: 7.625rem;
+      margin-right: 7.625rem;
+    }
+  }
   &__img {
     margin: $mobile-margin-16;
     object-fit: contain;
@@ -153,9 +159,7 @@ header {
       //width: 78%;
     }
     @include computerscreen {
-      margin-left: 7.625rem;
-      margin-right: 7.625rem;
-      width: 78%;
+      width: 100%;
     }
   }
   &__paragraph {
@@ -249,7 +253,6 @@ header {
     }
   }
   &__lower {
-    border-bottom: 1px solid #e1e1e1;
     display: flex;
     flex-direction: column;
     margin-left: 4.2rem;
@@ -274,8 +277,16 @@ header {
       border-radius: 0.25rem;
       background-color: #323232;
       color: #fafafa;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1.2rem;
+      @include tabletscreen {
+        width: 30%;
+        margin-left: 70%;
+      }
+      @include computerscreen {
+        width: 30%;
+        margin-left: 70%;
+      }
     }
   }
 }
