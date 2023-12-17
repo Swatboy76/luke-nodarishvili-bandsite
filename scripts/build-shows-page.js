@@ -23,9 +23,8 @@ function displayShows(showsList) {
       }
     });
     createdArticle.onclick = function () {
-      //convert to addEventLissener=============================================================
       createdArticle.classList.toggle("individual-show--clicked");
-    }; //this was recomended to me via research
+    };
 
     //1St Div (Reuse as needed) Date
     let dateHTML = document.createElement("div"); //makes the 1st div

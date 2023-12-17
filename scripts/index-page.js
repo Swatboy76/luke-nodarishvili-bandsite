@@ -53,8 +53,6 @@ function loadComments(userComments) {
     let nameHTML = document.createElement("p"); //makes the P tag to put the string into
     nameHTML.innerText = nameText; //puts the string into the P tag inside the "box" so it can be used later.
 
-    //let dateText = userComments[i].timestamp;
-    //dateText = dateText.toLocaleString("en-US");
     let dateText = new Date(userComments[i].timestamp);
     let dateHTML = document.createElement("p");
     dateHTML.classList.add("comment__header--date");
@@ -64,7 +62,7 @@ function loadComments(userComments) {
       day: "2-digit",
     });
 
-    let commentText = userComments[i].comment; // needs modification for output of API
+    let commentText = userComments[i].comment;
     let commentHTML = document.createElement("p");
     commentHTML.innerText = commentText;
 
@@ -80,8 +78,8 @@ function loadComments(userComments) {
     headerdateDiv.appendChild(nameHTML); //adds text to Div 4 in two parts for CSS reasons
     headerdateDiv.appendChild(dateHTML);
 
-    articleHTML.appendChild(headerdateDiv); //adds Div 4
-    articleHTML.appendChild(commentHTML); //adds P 5 below Div 4
+    articleHTML.appendChild(headerdateDiv);
+    articleHTML.appendChild(commentHTML);
 
     createdArticle.appendChild(profilepPictureHTML);
     createdArticle.appendChild(articleHTML);
