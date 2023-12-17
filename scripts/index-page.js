@@ -10,19 +10,10 @@ const getData = async () => {
 };
 document.getElementById("form-all").addEventListener("submit", displayComments);
 
-function displayComments(event) {
+async function displayComments(event) {
   event.preventDefault();
 
   let nameText = document.getElementById("form-name").value;
-
-  let dateText = new Date().toISOString().split("T")[0];
-  dateText = new Date().toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }); //needs to be set to use timestamps, unix ones, as the date section will be modified to do the same
-
-  let profilepPictureSrc = "n/a";
 
   let commentText = document.getElementById("form-comment").value;
 
@@ -30,9 +21,10 @@ function displayComments(event) {
     name: nameText,
     comment: commentText,
   };
+  await bandsiteAPI.postComments(newComment); //This is the current error
 
-  userComments.unshift(newComment);
-
+  //userComments.unshift(newComment);
+  getData();
   //loadComments();
 
   document.getElementById("form-all").reset();
@@ -60,10 +52,16 @@ function loadComments(userComments) {
     let nameHTML = document.createElement("p"); //makes the P tag to put the string into
     nameHTML.innerText = nameText; //puts the string into the P tag inside the "box" so it can be used later.
 
-    let dateText = userComments[i].timestamp; // needs modification to convert from Unix to human time
+    //let dateText = userComments[i].timestamp;
+    //dateText = dateText.toLocaleString("en-US");
+    let dateText = new Date(userComments[i].timestamp);
     let dateHTML = document.createElement("p");
     dateHTML.classList.add("comment__header--date");
-    dateHTML.innerText = dateText;
+    dateHTML.innerText = dateText.toLocaleString("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
 
     let commentText = userComments[i].comment; // needs modification for output of API
     let commentHTML = document.createElement("p");

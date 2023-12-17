@@ -11,6 +11,25 @@ class bandsiteAPI {
     let userComments = response.data;
     return userComments;
   }
+  async postComments(newComment) {
+    try {
+      console.log("debug");
+      const output = await axios.post(
+        `${this.baseUrl}/comments?api_key=${this.apiKey}`,
+        newComment
+      );
+    } catch (error) {
+      console.log("Something went wrong");
+    }
+  }
+  async getShows() {
+    const response = await axios.get(
+      `${this.baseUrl}/showdates?api_key=${this.apiKey}`
+    );
+    console.log(`${this.baseUrl}/comments?api_key=${this.apiKey}`);
+    let showsList = response.data;
+    return showsList;
+  }
 }
 
 export default bandsiteAPI;
