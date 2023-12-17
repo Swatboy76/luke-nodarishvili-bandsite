@@ -8,6 +8,7 @@ const getData = async () => {
 
   loadComments(userComments);
 };
+
 document.getElementById("form-all").addEventListener("submit", displayComments);
 
 async function displayComments(event) {

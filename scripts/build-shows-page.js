@@ -10,7 +10,8 @@ const getData = async () => {
 };
 
 const targetHTML = document.getElementById("showsDiv");
-function displayShows() {
+
+function displayShows(showsList) {
   for (let i = 0; i < showsList.length; i++) {
     let createdArticle = document.createElement("article"); //makes the main article box, and adds the on-click system
     createdArticle.classList.add("individual-show");
@@ -31,13 +32,18 @@ function displayShows() {
     dateHTML.classList.add("individual-show__data");
 
     let dateName = document.createElement("p"); //makes the P tag to put the string into
-    dateName.innerText = "DATE"; //Change
+    dateName.innerText = "DATE";
     dateName.classList.add("individual-show__label");
     dateHTML.appendChild(dateName); // adds the "DATE" to the div
 
-    let dateData = showsList[i].date; //Change
+    let dateData = new Date(showsList[i].date);
     let dateDataHTML = document.createElement("p");
-    dateDataHTML.innerText = dateData; //puts the data (text) into the P tag
+    dateDataHTML.innerText = dateData.toLocaleString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "2-digit",
+      year: "numeric",
+    }); //puts the data (text) into the P tag
     dateDataHTML.classList.add("individual-show__data__date");
     dateHTML.appendChild(dateDataHTML); // adds the data (text) to the div
 
@@ -46,11 +52,11 @@ function displayShows() {
     venueHTML.classList.add("individual-show__data");
 
     let venueName = document.createElement("p"); //makes the P tag to put the string into
-    venueName.innerText = "VENUE"; //Change
+    venueName.innerText = "VENUE";
     venueName.classList.add("individual-show__label");
     venueHTML.appendChild(venueName); // adds the "VENUE" to the div
 
-    let venueData = showsList[i].venue; //Change
+    let venueData = showsList[i].place;
     let venueDataHTML = document.createElement("p");
     venueDataHTML.innerText = venueData; //puts the data (text) into the P tag
     venueDataHTML.classList.add("individual-show__data__other");
