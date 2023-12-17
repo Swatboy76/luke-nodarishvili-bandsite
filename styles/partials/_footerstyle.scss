@@ -5,6 +5,10 @@
   background-color: #323232;
   padding: 1rem;
   color: #ffffff;
+  @include computerscreen {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
   &__header {
     @include tabletscreen {
       display: flex;
@@ -49,7 +53,6 @@
       gap: 4rem;
     }
     &-details {
-      // TO FIX MARKER ======================================================================================= TO FIX
       margin: 2rem 0;
       &--name {
         margin: 0;
