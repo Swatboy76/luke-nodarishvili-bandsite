@@ -3,41 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/shows.scss" />
     <link rel="stylesheet" href="../styles/shows.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+      integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../scripts/build-shows-page.js" type="module"></script>
     <title>Document</title>
   </head>
   <body>
     <!--███████████ Header ███████████-->
     <header>
       <div class="topbar">
-        <a href="./index.html"
-          ><img
-            class="topbar__img"
-            src="../Assets/Logo/Logo-bandsite.svg"
-            alt="Bandsite"
+        <a class="topbar__img" href="../index.html"
+          ><img src="../Assets/Logo/Logo-bandsite.svg" alt="Bandsite"
         /></a>
-        <nav class="topbar__nav">
-          <a class="topbar__link" href="../index.html">Biography</a>
-          <a
-            class="topbar__link topbar__link--current-page"
-            href="./pages/shows.html"
-            >Shows</a
-          >
-        </nav>
+        <ul class="topbar__unorderedlist">
+          <nav class="topbar__nav">
+            <li class="topbar__unorderedlist--item">
+              <a class="topbar__link" href="../index.html">Biography</a>
+            </li>
+            <li class="topbar__unorderedlist--item">
+              <a
+                class="topbar__link topbar__link--current-page"
+                href="./pages/shows.html"
+                >Shows</a
+              >
+            </li>
+          </nav>
+        </ul>
       </div>
       <section class="topbar__picture">
         <div class="picture-title"></div>
-        <div class="topbar__picture__heading">
-          <h3>Beautiful Beasts Album</h3>
-          <h1>Queen of Yellow x For The Stings</h1>
+        <div class="topbar__picture topbar__heading">
+          <div class="topbar__picture topbar__heading--left">
+            <h3>Beautiful Beasts Album</h3>
+            <h1>Queen of Yellow x For The Stings</h1>
+          </div>
           <iframe
+            class="topbar__heading-music-embed"
             width="100%"
             height="166"
             scrolling="no"
             frameborder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23590747&amp;{ ADD YOUR PARAMETERS HERE }"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23590747&amp;"
           >
           </iframe>
         </div>
@@ -45,8 +57,8 @@
     </header>
 
     <section class="shows">
-      <h1 class="shows__Computer-screen">Shows</h1>
-      <div>
+      <h2 class="shows__title">Shows</h2>
+      <div class="shows__computer-screen">
         <div class="shows__shows-bar-wide">
           <p>Date</p>
           <p>Venue</p>
@@ -62,7 +74,7 @@
     <footer class="footer">
       <div class="footer__header">
         <div class="footer__header--left">
-          <h1 class="footer__heading">Get in touch</h1>
+          <h2 class="footer__heading">Get in touch</h2>
           <div class="footer__socials">
             <img src="../Assets/Icons/SVG/Icon-instagram.svg" alt="Instagram" />
             <img src="../Assets/Icons/SVG/Icon-facebook.svg" alt="Facebook" />
@@ -82,8 +94,8 @@
             <h3>The Bees Knees Management</h3>
           </div>
           <div class="footer__body-details--address">
-            <p>503 Broadway Penthouse,</p>
-            <p>New York, NY 10012, USA</p>
+            <p class="footer__body-details--area">503 Broadway Penthouse,</p>
+            <p class="footer__body-details--area">New York, NY 10012, USA</p>
           </div>
           <p>info@thebeesknees.com</p>
         </div>
@@ -93,8 +105,8 @@
             <h3>Limitless Artist Group</h3>
           </div>
           <div class="footer__body-details--address">
-            <p>Booking Agent for</p>
-            <p>US / South America / Japan</p>
+            <p class="footer__body-details--area">Booking Agent for</p>
+            <p class="footer__body-details--area">US / South America / Japan</p>
           </div>
           <p>pearl.gregg@limitlessag.com</p>
         </div>
@@ -104,8 +116,8 @@
             <h3>ARCH Entertainment</h3>
           </div>
           <div class="footer__body-details--address">
-            <p>Booking Agent for</p>
-            <p>UK / EU / AU</p>
+            <p class="footer__body-details--area">Booking Agent for</p>
+            <p class="footer__body-details--area">UK / EU / AU</p>
           </div>
           <p>cwhyte@archentertainment.com</p>
         </div>

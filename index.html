@@ -1,192 +1,180 @@
-<!--
-  TASKS:
-  5/6th,
-  complete comments section, HTML included
-  - set up comment maker framework /
-  - set up comment framework
-  - setup js code
-    - code needs to:
-    go though a list of already made comments (check if it must be a txt file)
-    add comments when ones made
-  - set up forms
-
-
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/bio.scss" />
     <link rel="stylesheet" href="./styles/bio.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+      integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./scripts/index-page.js" type="module"></script>
     <title>Biography</title>
   </head>
   <body>
     <!--███████████ Header ███████████-->
     <header>
       <div class="topbar">
-        <a href="./index.html"
-          ><img
-            class="topbar__img"
-            src="./Assets/Logo/Logo-bandsite.svg"
-            alt="Bandsite"
+        <a class="topbar__img" href="./index.html"
+          ><img src="./Assets/Logo/Logo-bandsite.svg" alt="Bandsite"
         /></a>
-        <nav class="topbar__nav">
-          <a class="topbar__link topbar__link--current-page" href="./index.html"
-            >Biography</a
-          >
-          <a class="topbar__link" href="./pages/shows.html">Shows</a>
-        </nav>
+        <ul class="topbar__unorderedlist">
+          <nav class="topbar__nav">
+            <li class="topbar__unorderedlist--item">
+              <a
+                class="topbar__link topbar__link--current-page"
+                href="./index.html"
+                >Biography</a
+              >
+            </li>
+            <li class="topbar__unorderedlist--item">
+              <a class="topbar__link" href="./pages/shows.html">Shows</a>
+            </li>
+          </nav>
+        </ul>
       </div>
       <section class="topbar__picture">
         <div class="picture-title"></div>
-        <h1>The Bees Knees</h1>
+        <h1 class="topbar__picture topbar__header">The Bees Knees</h1>
       </section>
     </header>
-
-    <!--███████████ Biography ███████████-->
-    <article class="musicians-article">
-      <h1>About the musicians</h1>
-      <img
-        class="musicians-article__img"
-        src="./Assets/Images/band.jpg"
-        alt="Band playing at consert"
-      />
-      <h2>
-        "We push each other to be the best. It’s not uncommon for one of us to
-        say ‘this needs to be better, back to the drawing board’”
-      </h2>
-      <h3>- Bryan Teddy, lead vocalist of The Bees Knees</h3>
-
-      <h2>The Bees Knees</h2>
-      <div class="musicians-article__paragraph">
-        <div class="musicians-article__paragraph__text">
-          <p>
-            The Bees Knees is a pop rock band originating from San Francisco,
-            California. The band consists of lead vocalist Bryan Teddy,
-            guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee
-            and drummer Freddie Fischer. The band achieved its first commercial
-            success as an unsigned act, drawing attention from manager Cam
-            Adams. Having worked with other popular acts (The Elephant In The
-            Room, One Trick Pony, The Cat’s Meow), Adams was confident the band
-            could succeed even further, pushing them to sign with Magenta
-            Records.
-          </p>
-        </div>
-        <div class="musicians-article__paragraph__text">
-          <p>
-            From there, the band has soared, gaining international recognition
-            and ranking in the top 10 on the Poster Charts. New fans immediately
-            fell in love with the band’s original and organic attitude,
-            solidifying their place as one of the hottest and fastest up and
-            coming acts of this century. Fans affectionately refer to themselves
-            as “The Hive” and are drawn to their candid and authentic
-            performances on stage. Looking forward to touring in the future, The
-            Bees Knees are currently recording their second studio album,
-            looking to be released in late 2021.
-          </p>
-        </div>
-      </div>
-    </article>
-
-    <!--███████████ Photo Gallery ███████████-->
-    <section class="photo-gallery">
-      <h1 class="photo-gallery__heading">Photo Gallery</h1>
-      <div class="photo-gallery__images">
-        <img src="./Assets/Images/Photo-gallery-1.jpg" alt="#" />
-        <img src="./Assets/Images/Photo-gallery-2.jpg" alt="#" />
-        <img src="./Assets/Images/Photo-gallery-3.jpg" alt="#" />
-
-        <img src="./Assets/Images/Photo-gallery-4.jpg" alt="#" />
-        <img
-          src="./Assets/Images/Photo-gallery-5.jpg"
-          alt="cheering people and enourmous quanties of silly string"
-        />
-        <img
-          src="./Assets/Images/Photo-gallery-6.jpg"
-          alt="Main singer singing"
-        />
-
-        <img
-          src="./Assets/Images/Photo-gallery-7.jpg"
-          alt="Widescreen Confetii and people cheering"
-        />
-        <img src="./Assets/Images/Photo-gallery-8.jpg" alt="DJ mixer board" />
-        <img
-          src="./Assets/Images/Photo-gallery-9.jpg"
-          alt="Confetii and people cheering"
-        />
-      </div>
-    </section>
-
-    <!--███████████ Comments ███████████-->
-    <section class="comment-section">
-      <form id="form-all" class="comment-section__form">
-        <h1>Join the Conversation</h1>
-        <label for="commentername" class="comment-section__form__name-label-a"
-          >Name</label
-        >
-        <div class="comment-section__form__image-commentername">
+    <main>
+      <!--███████████ Biography ███████████-->
+      <article class="musicians-article">
+        <h2>About the musicians</h2>
+        <div class="musicians-article__contents">
           <img
-            class="comment-section__form__image-commentername__image"
+            class="musicians-article__img"
+            src="./Assets/Images/band.jpg"
+            alt="Band playing at consert"
+          />
+          <h2>
+            "We push each other to be the best. It’s not uncommon for one of us
+            to say ‘this needs to be better, back to the drawing board’”
+          </h2>
+          <h3>- Bryan Teddy, lead vocalist of The Bees Knees</h3>
+
+          <h2>The Bees Knees</h2>
+          <div class="musicians-article__paragraph">
+            <div class="musicians-article__text">
+              <p>
+                The Bees Knees is a pop rock band originating from San
+                Francisco, California. The band consists of lead vocalist Bryan
+                Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist
+                Kent Zulkee and drummer Freddie Fischer. The band achieved its
+                first commercial success as an unsigned act, drawing attention
+                from manager Cam Adams. Having worked with other popular acts
+                (The Elephant In The Room, One Trick Pony, The Cat’s Meow),
+                Adams was confident the band could succeed even further, pushing
+                them to sign with Magenta Records.
+              </p>
+            </div>
+            <div class="musicians-article__text">
+              <p>
+                From there, the band has soared, gaining international
+                recognition and ranking in the top 10 on the Poster Charts. New
+                fans immediately fell in love with the band’s original and
+                organic attitude, solidifying their place as one of the hottest
+                and fastest up and coming acts of this century. Fans
+                affectionately refer to themselves as “The Hive” and are drawn
+                to their candid and authentic performances on stage. Looking
+                forward to touring in the future, The Bees Knees are currently
+                recording their second studio album, looking to be released in
+                late 2021.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!--███████████ Photo Gallery ███████████-->
+      <section class="photo-gallery">
+        <h2 class="photo-gallery__heading">Photo Gallery</h2>
+        <div class="photo-gallery__images">
+          <img
+            src="./Assets/Images/Photo-gallery-1.jpg"
+            alt="LASER's flying over people celebrating"
+          />
+          <img
+            src="./Assets/Images/Photo-gallery-2.jpg"
+            alt="Lady waving hands in the air gleefuly"
+          />
+          <img
+            src="./Assets/Images/Photo-gallery-3.jpg"
+            alt="siluoute of peoples hands celebrating"
+          />
+
+          <img
+            src="./Assets/Images/Photo-gallery-4.jpg"
+            alt="Lady wearing old movie style prisoner jumper with bright lights in backround"
+          />
+          <img
+            src="./Assets/Images/Photo-gallery-5.jpg"
+            alt="cheering people and enourmous quanties of silly string"
+          />
+          <img
+            src="./Assets/Images/Photo-gallery-6.jpg"
+            alt="Main singer singing"
+          />
+
+          <img
+            src="./Assets/Images/Photo-gallery-7.jpg"
+            alt="Widescreen Confetii and people cheering"
+          />
+          <img src="./Assets/Images/Photo-gallery-8.jpg" alt="DJ mixer board" />
+          <img
+            src="./Assets/Images/Photo-gallery-9.jpg"
+            alt="Confetii and people cheering"
+          />
+        </div>
+      </section>
+    </main>
+    <!--███████████ Comments ███████████-->
+    <section class="community">
+      <form id="form-all" class="form">
+        <h2>Join the Conversation</h2>
+        <label class="form__label--upper" for="form-name">Name</label>
+        <div class="form__upper">
+          <img
+            class="form__upper--image"
             src="./Assets/Images/Mohan-muruge.jpg"
             alt="Default Avatar"
           />
           <input
             id="form-name"
-            class="comment-section__form__image-commentername__textbox"
+            class="form__upper--text"
             type="text"
             name="name"
             placeholder="Enter your name"
           />
         </div>
-        <div class="comment-section__form__submission-comment">
-          <label class="comment-section__form__submission-comment__label-b" for="comment">Comment</label>
-          <input
+        <div class="form__lower">
+          <label class="form__label" for="form-comment">Comment</label>
+          <textarea
             id="form-comment"
-            class="comment-section__form__submission-comment__textbox"
-            type="text"
+            class="form__lower--text"
             name="comment"
             placeholder="Add a new comment"
-          />
+          ></textarea>
           <input
-            class="comment-section__form__submission-comment__send-button"
+            class="form__lower--submit"
             type="submit"
             name="submit"
             value="Comment"
-          >
-        </input>
+          />
         </div>
       </form>
 
-      <section id="commentSection" class="comment-section__comments">
-        <!-- Test article, Use as needed <article class="comment-section__comments__article">
-          <img
-            class="comment-section__comments__article__image"
-            src="./Assets/Images/Mohan-muruge.jpg"
-            alt="PfP"
-          />
-          <div class="comment-section__comments__article__text">
-            <div class="comment-section__comments__article__headerdate">
-              <p>name</p>
-              <p>date</p>
-            </div>
-            <p>
-              This is art. This is inexplicable magic expressed in the purest
-              way, everything that makes up this majestic work deserves
-              reverence. Let us appreciate this for what it is and what it
-              contains.
-            </p>
-          </div>
-        </article>-->
-      </section>
+      <section id="commentSection"></section>
     </section>
 
     <!--███████████ Footer ███████████-->
     <footer class="footer">
       <div class="footer__header">
         <div class="footer__header--left">
-          <h1 class="footer__heading">Get in touch</h1>
+          <h2 class="footer__heading">Get in touch</h2>
           <div class="footer__socials">
             <img src="./Assets/Icons/SVG/Icon-instagram.svg" alt="Instagram" />
             <img src="./Assets/Icons/SVG/Icon-facebook.svg" alt="Facebook" />
@@ -206,8 +194,8 @@
             <h3>The Bees Knees Management</h3>
           </div>
           <div class="footer__body-details--address">
-            <p>503 Broadway Penthouse,</p>
-            <p>New York, NY 10012, USA</p>
+            <p class="footer__body-details--area">503 Broadway Penthouse,</p>
+            <p class="footer__body-details--area">New York, NY 10012, USA</p>
           </div>
           <p>info@thebeesknees.com</p>
         </div>
@@ -217,8 +205,8 @@
             <h3>Limitless Artist Group</h3>
           </div>
           <div class="footer__body-details--address">
-            <p>Booking Agent for</p>
-            <p>US / South America / Japan</p>
+            <p class="footer__body-details--area">Booking Agent for</p>
+            <p class="footer__body-details--area">US / South America / Japan</p>
           </div>
           <p>pearl.gregg@limitlessag.com</p>
         </div>
@@ -228,8 +216,8 @@
             <h3>ARCH Entertainment</h3>
           </div>
           <div class="footer__body-details--address">
-            <p>Booking Agent for</p>
-            <p>UK / EU / AU</p>
+            <p class="footer__body-details--area">Booking Agent for</p>
+            <p class="footer__body-details--area">UK / EU / AU</p>
           </div>
           <p>cwhyte@archentertainment.com</p>
         </div>
@@ -242,5 +230,4 @@
       <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
   </body>
-  <script src="./scripts/index-page.js"></script>
 </html>

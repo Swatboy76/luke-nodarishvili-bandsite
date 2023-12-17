@@ -1,239 +1,127 @@
-@use "./partials/variables&fonts.scss" as *;
+@use "./partials/variables.scss" as *;
 @use "./partials/breakpoints.scss" as *;
+@use "./partials/bodystyle.scss" as *;
+@use "./partials/footerstyle.scss" as *;
 
-body {
-  margin: 0; //ask how to make this less important so that it can be overridden
-  @include phonescreen {
-    h1 {
-      font-size: 2rem;
-      line-height: 2rem;
-      font-weight: 700;
-      font-family: avenir-Next-Bold;
-    }
-    h2 {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 600; //get this working
-      font-family: avenir-Next-Reg;
-    }
-    h3 {
-      font-size: 0.813rem;
-      line-height: 1.375rem;
-      font-weight: 600;
-      font-family: avenir-Next-Demi;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.125rem;
-      font-weight: 400;
-      font-family: avenir-Next-Reg;
-    }
-    footer {
-      font-size: 0.813rem;
-      line-height: 1.25rem;
-      font-weight: 400;
-      font-family: avenir-Next-Reg;
-    }
-    a,
-    button {
-      font-size: 1rem;
-      line-height: 1.25rem;
-      font-weight: 700;
-      font-family: avenir-Next-Bold;
-    }
-  }
-  @include tabletscreen {
-    h1 {
-      font-size: 2.5rem;
-      line-height: 4.25rem;
-      font-weight: 700;
-      font-family: avenir-Next-Bold;
-    }
-    h2 {
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-      font-weight: demi 600; //get this working
-      font-family: avenir-Next-Reg;
-    }
-    h3 {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 600;
-      font-family: avenir-Next-Demi;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.375rem;
-      font-weight: 400;
-      font-family: avenir-Next-Reg;
-    }
-    footer {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-weight: 400;
-      font-family: avenir-Next-Reg;
-    }
-    a,
-    button {
-      font-size: 1rem;
-      line-height: 1.25rem;
-      font-weight: 700;
-      font-family: avenir-Next-Bold;
-    }
-  }
-  @include computerscreen {
-    h1 {
-      font-size: 4rem;
-      line-height: 4.25rem;
-      font-weight: 700;
-      font-family: avenir-Next-Bold;
-    }
-    h2 {
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-      font-weight: demi 600; //get this working
-      font-family: avenir-Next-Reg;
-    }
-    h3 {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 600;
-      font-family: avenir-Next-Demi;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.375rem;
-      font-weight: 400;
-      font-family: avenir-Next-Reg;
-    }
-    footer {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-weight: 400;
-      font-family: avenir-Next-Reg;
-    }
-    a,
-    button {
-      font-size: 1rem;
-      line-height: 1.25rem;
-      font-weight: 700;
-      font-family: avenir-Next-Bold;
-    }
-  }
-}
 header {
   background-color: $footer-header-colour;
   color: $footer-header-colour-text;
 
   display: flex;
   flex-direction: column;
-  /*#################################### TOP BAR ####################################*/
-  .topbar {
-    display: flex;
-    flex-direction: column;
+}
+.topbar {
+  display: flex;
+  flex-direction: column;
+  @include tabletscreen {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
+  @include computerscreen {
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
+  &__picture {
+    position: relative;
+  }
+  &__header {
+    position: absolute;
+    top: 34%;
+    left: 1rem;
     @include tabletscreen {
-      flex-direction: row;
-      height: 5rem;
-      align-items: center;
+      left: 2rem;
     }
     @include computerscreen {
-      flex-direction: row;
-      height: 5rem;
-      align-items: center;
+      left: 8rem;
     }
-    &__picture {
-      position: relative;
-      h1 {
-        position: absolute;
-        top: 34%;
-        left: 1rem;
-        @include tabletscreen {
-          left: 2rem;
-        }
-        @include computerscreen {
-          left: 8rem;
-        }
-      }
+  }
+
+  &__img {
+    margin-top: $mobile-margin-16;
+    margin-bottom: $mobile-margin-16;
+    margin-left: auto;
+    margin-right: auto;
+    @include tabletscreen {
+      margin-top: $tablet-or-computer-margin-36;
+      margin-bottom: $tablet-or-computer-margin-36;
+      margin-left: 2.5rem;
+      margin-right: 5rem;
     }
-    &__img {
-      margin-top: $mobile-margin-16;
-      margin-bottom: $mobile-margin-16;
-      margin-left: auto;
-      margin-right: auto;
-      @include tabletscreen {
-        margin-top: $tablet-or-computer-margin-36;
-        margin-bottom: $tablet-or-computer-margin-36;
-        margin-left: 2.5rem;
-        margin-right: 5rem;
-      }
-      @include computerscreen {
-        margin-top: $tablet-or-computer-margin-36;
-        margin-bottom: $tablet-or-computer-margin-36;
-        margin-left: 2.5rem;
-        margin-right: 5rem;
-      }
-      height: 1.25rem;
-      width: 7.5rem;
+    @include computerscreen {
+      margin-top: $tablet-or-computer-margin-36;
+      margin-bottom: $tablet-or-computer-margin-36;
+      margin-left: 2.5rem;
+      margin-right: 5rem;
     }
-    /*#################################### NAV ####################################*/
-    &__nav {
+    height: 1.25rem;
+    width: 7.5rem;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @include tabletscreen {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      align-items: center;
+    }
+    @include computerscreen {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  &__unorderedlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    &--item {
+      @extend .topbar__unorderedlist;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $footer-header-colour-text;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 0.25rem solid rgba(255, 255, 255, 0);
+    &--current-page {
+      border-bottom: 0.25rem solid white;
       @include tabletscreen {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+        border-bottom: 0.25rem solid white;
+        padding-bottom: 1.75rem;
+        padding-top: 1.75rem;
       }
       @include computerscreen {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      /*#################################### NAV LINKS ####################################*/
-    }
-    &__link {
-      text-decoration: none;
-      color: $footer-header-colour-text;
-      width: 50%;
-      display: flex;
-      justify-content: space-around;
-      padding: 1rem;
-      &--current-page {
         border-bottom: 0.25rem solid white;
-        @include tabletscreen {
-          border-bottom: 4px solid white;
-          padding-bottom: 1.75rem;
-          padding-top: 1.75rem;
-        }
-        @include computerscreen {
-          border-bottom: 4px solid white;
-          padding-bottom: 1.75rem;
-          padding-top: 1.75rem;
-        }
+        padding-bottom: 1.75rem;
+        padding-top: 1.75rem;
       }
     }
   }
-  .picture-title {
-    background-image: url(../Assets/Images/hero-bio.jpg);
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    opacity: 60%;
-    @include phonescreen {
-      height: 30vh;
-      padding: $mobile-margin-16;
-    }
-    @include tabletscreen {
-      height: 48vh;
-      padding: $tablet-or-computer-margin-48;
-    }
-    @include computerscreen {
-      height: 48vh;
-      padding: 10rem; //computer format, no fixed number so i thew in 160px
-    }
+}
+.picture-title {
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  opacity: 60%;
+  height: 30vh;
+  padding: $mobile-margin-16;
+
+  @include tabletscreen {
+    height: 48vh;
+    padding: $tablet-or-computer-margin-48;
+  }
+  @include computerscreen {
+    height: 48vh;
+    padding: 10rem;
   }
 }
 
@@ -247,6 +135,12 @@ header {
     margin-left: 7.625rem;
     margin-right: 7.625rem;
   }
+  &__contents {
+    @include computerscreen {
+      margin-left: 7.625rem;
+      margin-right: 7.625rem;
+    }
+  }
   &__img {
     margin: $mobile-margin-16;
     object-fit: contain;
@@ -255,30 +149,18 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @include tabletscreen {
-      //margin: 122px;
-      //width: 78%;
-    }
     @include computerscreen {
-      margin-left: 122px;
-      margin-right: 122px;
-      width: 78%;
+      width: 100%;
     }
   }
   &__paragraph {
     @include tabletscreen {
       display: flex;
-      &__text {
-        display: flex;
-        margin: 1rem;
-      }
+      gap: 1rem;
     }
     @include computerscreen {
       display: flex;
-      &__text {
-        display: flex;
-        margin: 1rem;
-      }
+      gap: 1rem;
     }
   }
 }
@@ -296,13 +178,10 @@ header {
     flex-wrap: wrap;
   }
   img {
-    //talk to argen about this
     margin: 1rem;
-    @include phonescreen {
-      width: 96%;
-      display: flex;
-      justify-content: center;
-    }
+    width: 96%;
+    display: flex;
+    justify-content: center;
     @include tabletscreen {
       width: 28%;
       display: flex;
@@ -316,10 +195,8 @@ header {
   }
 }
 
-.comment-section {
-  @include phonescreen {
-    width: 90%;
-  }
+.community {
+  width: 90%;
   @include tabletscreen {
     width: 70%;
   }
@@ -330,177 +207,99 @@ header {
   font-family: avenir-Next-reg;
   margin-left: auto;
   margin-right: auto;
-  &__form {
-    border-bottom: 1px solid #e1e1e1;
-    //name above image & textbox
-    &__name-label-a {
-      color: #afafaf;
+}
+.form {
+  border-bottom: 1px solid #e1e1e1;
+  &__label {
+    color: #afafaf;
+    font-weight: 700;
+    margin-top: 0.75rem;
+    &--upper {
       margin-left: 4.2rem;
-      font-weight: 700;
-      margin-top: 12px; // <----------------------- PIXEL NUMBER
-    }
-
-    //Image & textbox
-    &__image-commentername {
-      display: flex;
-      align-items: center;
-      &__image {
-        width: 36px; // <------------------------,
-        height: 36px; // <----------------------- PIXEL NUMBER
-        margin-left: 1rem;
-        margin-right: 1rem;
-        border-radius: 50%;
-      }
-      &__textbox {
-        margin-top: 4px; // <--------------------------,
-        margin-bottom: 4px; // <----------------------- PIXEL NUMBER
-        width: 100%;
-        height: 36px; // <----------------------- PIXEL NUMBER
-        border-color: #e1e1e1;
-        border-style: solid;
-        border-radius: 4px; // <----------------------- PIXEL NUMBER
-        padding: 0.375rem; // 6 px
-      }
-    }
-
-    //Comment box & Submission button comment-section__form__submission-comment__label-b
-    &__submission-comment {
-      border-bottom: 1px solid #e1e1e1;
-      display: flex;
-      flex-direction: column;
-      margin-left: 4.2rem;
-      margin-bottom: 12px; // <----------------------- PIXEL NUMBER
-      &__label-b {
-        color: #afafaf;
-        font-weight: 700;
-      }
-      &__textbox {
-        //width: 95.4%;
-        height: 100px; // <----------------------- PIXEL NUMBER
-        border-color: #e1e1e1;
-        border-style: solid;
-        border-radius: 4px; // <-----------------------,
-        margin-bottom: 12px; // <-----------------------\
-        margin-top: 4px; // <----------------------- PIXEL NUMBER
-        padding: 0.375rem; // 6 px
-        text-align: left;
-        vertical-align: top;
-      }
-      &__send-button {
-        //width: 97.4%;
-        height: 40px; // <----------------------- PIXEL NUMBER
-        border-color: #323232;
-        border-style: solid;
-        background-color: #323232;
-        color: #fafafa;
-        border-radius: 4px; // <----------------------- PIXEL NUMBER
-      }
+      @extend .form__label;
     }
   }
-  &__comments {
-    &__article {
-      border-bottom: 1px solid #e1e1e1;
-      display: flex;
-      &__image {
-        width: 36px; // <------------------------,
-        height: 36px; // <----------------------- PIXEL NUMBER
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 0.5rem;
-        border-radius: 50%;
+  &__upper {
+    display: flex;
+    align-items: center;
+    &--image {
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-radius: 50%;
+    }
+    &--text {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+      width: 100%;
+      height: 2.25rem;
+      border-color: #e1e1e1;
+      border-style: solid;
+      border-radius: 0.25rem;
+      padding: 0.375rem;
+      font-family: avenir-Next-Reg;
+      background-color: #fafafa;
+    }
+  }
+  &__lower {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4.2rem;
+    margin-bottom: 0.75rem;
+    &--text {
+      height: 6.25rem;
+      border-color: #e1e1e1;
+      border-style: solid;
+      border-radius: 0.25rem;
+      margin-bottom: 0.75rem;
+      margin-top: 0.25rem;
+      padding: 0.375rem;
+      text-align: left;
+      vertical-align: top;
+      font-family: avenir-Next-Reg;
+      background-color: #fafafa;
+    }
+    &--submit {
+      height: 2.5rem;
+      border-color: #323232;
+      border-style: solid;
+      border-radius: 0.25rem;
+      background-color: #323232;
+      color: #fafafa;
+      font-weight: 700;
+      font-size: 1.2rem;
+      @include tabletscreen {
+        width: 30%;
+        margin-left: 70%;
       }
-      &__headerdate {
-        &__date {
-          color: #afafaf;
-        }
-        display: flex;
-        justify-content: space-between;
-      }
-      &__text {
-        width: 100%;
+      @include computerscreen {
+        width: 30%;
+        margin-left: 70%;
       }
     }
   }
 }
-
-.footer {
-  background-color: #323232;
-  padding: 1rem;
-  color: #ffffff;
+.comment {
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  &__image {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background-color: #e1e1e1;
+  }
+  &__main {
+    width: 82%;
+  }
   &__header {
-    @include tabletscreen {
-      display: flex;
-      justify-content: space-between;
-    }
-    @include computerscreen {
-      display: flex;
-      justify-content: space-between;
-    }
-    &--left {
-      @include phonescreen {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-      }
-      @include tabletscreen {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-      }
-      @include computerscreen {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-      }
-    }
-  }
-  &__socials {
     display: flex;
-    gap: 2rem;
-    img {
-      width: 30px;
-    }
-  }
-  &__body {
-    @include tabletscreen {
-      display: flex;
-      flex-direction: row;
-      gap: 3rem;
-    }
-    @include computerscreen {
-      display: flex;
-      flex-direction: row;
-      gap: 4rem;
-    }
-    &-details {
-      margin: 2rem 0;
-      &--name {
-        h3 {
-          margin: 0;
-        }
-      }
-      &--address {
-        margin: 1rem 0;
-        p {
-          margin: 0;
-        }
-      }
-    }
-  }
-  &__logo {
-    width: 120px;
-    &--mobile {
-      @include tabletscreen {
-        display: none;
-      }
-      @include computerscreen {
-        display: none;
-      }
-    }
-    &--widescreen {
-      @include phonescreen {
-        display: none;
-      }
+    justify-content: space-between;
+    &--date {
+      color: #afafaf;
     }
   }
 }

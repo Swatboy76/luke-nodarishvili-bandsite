@@ -1,0 +1,88 @@
+@use "./breakpoints.scss" as *;
+@use "./fonts.scss" as *;
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #ffffff;
+  @include tabletscreen {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include computerscreen {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  &__header {
+    @include tabletscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include computerscreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--left {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      @include tabletscreen {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+      @include computerscreen {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    img {
+      width: 30px;
+    }
+  }
+  &__body {
+    @include tabletscreen {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+    }
+    @include computerscreen {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+    }
+    &-details {
+      margin: 2rem 0;
+      &--name {
+        margin: 0;
+      }
+      &--address {
+        margin: 1rem 0;
+      }
+      &--area {
+        margin: 0;
+      }
+    }
+  }
+  &__logo {
+    width: 120px;
+    &--mobile {
+      @include tabletscreen {
+        display: none;
+      }
+      @include computerscreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      @include phonescreen {
+        display: none;
+      }
+    }
+  }
+}
