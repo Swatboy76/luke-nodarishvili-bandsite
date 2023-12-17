@@ -52,15 +52,13 @@
       // TO FIX MARKER ======================================================================================= TO FIX
       margin: 2rem 0;
       &--name {
-        h3 {
-          margin: 0;
-        }
+        margin: 0;
       }
       &--address {
         margin: 1rem 0;
-        p {
-          margin: 0;
-        }
+      }
+      &--area {
+        margin: 0;
       }
     }
   }

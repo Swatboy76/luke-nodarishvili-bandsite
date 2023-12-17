@@ -141,13 +141,13 @@ body button {
 .footer__body-details {
   margin: 2rem 0;
 }
-.footer__body-details--name h3 {
+.footer__body-details--name {
   margin: 0;
 }
 .footer__body-details--address {
   margin: 1rem 0;
 }
-.footer__body-details--address p {
+.footer__body-details--area {
   margin: 0;
 }
 .footer__logo {
@@ -218,7 +218,7 @@ header .topbar__heading {
     margin-right: auto;
     margin-top: 10%;
   }
-  header .topbar__heading__music-embed {
+  header .topbar__heading-music-embed {
     width: 50%;
   }
 }
