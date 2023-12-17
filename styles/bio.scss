@@ -3,14 +3,12 @@
 @use "./partials/bodystyle.scss" as *;
 @use "./partials/footerstyle.scss" as *;
 
-// --top--
 header {
   background-color: $footer-header-colour;
   color: $footer-header-colour-text;
 
   display: flex;
   flex-direction: column;
-  /*#################################### TOP BAR ####################################*/
 }
 .topbar {
   display: flex;
@@ -60,7 +58,6 @@ header {
     height: 1.25rem;
     width: 7.5rem;
   }
-  /*#################################### NAV ####################################*/
   &__nav {
     display: flex;
     flex-direction: row;
@@ -77,7 +74,6 @@ header {
       justify-content: space-evenly;
       align-items: center;
     }
-    /*#################################### NAV LINKS ####################################*/
   }
   &__unorderedlist {
     list-style-type: none;
@@ -129,7 +125,6 @@ header {
   }
 }
 
-// --upper center--
 .musicians-article {
   margin: 1rem;
   @include tabletscreen {
@@ -154,10 +149,6 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @include tabletscreen {
-      //margin: 122px;
-      //width: 78%;
-    }
     @include computerscreen {
       width: 100%;
     }
@@ -204,7 +195,6 @@ header {
   }
 }
 
-// --lower center--
 .community {
   width: 90%;
   @include tabletscreen {
@@ -264,7 +254,7 @@ header {
       border-radius: 0.25rem;
       margin-bottom: 0.75rem;
       margin-top: 0.25rem;
-      padding: 0.375rem; // 6 px
+      padding: 0.375rem;
       text-align: left;
       vertical-align: top;
       font-family: avenir-Next-Reg;

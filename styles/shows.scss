@@ -9,7 +9,6 @@ header {
 
   display: flex;
   flex-direction: column;
-  /*#################################### TOP BAR ####################################*/
   .topbar {
     display: flex;
     flex-direction: column;
@@ -66,7 +65,6 @@ header {
       height: 1.25rem;
       width: 7.5rem;
     }
-    /*#################################### NAV ####################################*/
     &__nav {
       display: flex;
       flex-direction: row;
@@ -83,7 +81,6 @@ header {
         justify-content: space-evenly;
         align-items: center;
       }
-      /*#################################### NAV LINKS ####################################*/
     }
     &__unorderedlist {
       list-style-type: none;
@@ -159,7 +156,6 @@ header {
     font-weight: 600;
     gap: 60%;
     padding-right: 64%;
-    //when on mobile format below code runs
     @include phonescreen {
       display: none;
     }
@@ -186,7 +182,6 @@ header {
   }
   &__label {
     color: #afafaf;
-    // when on a wider format the below code runs
     @include tabletscreen {
       display: none;
     }

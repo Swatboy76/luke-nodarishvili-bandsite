@@ -5,6 +5,10 @@
   background-color: #323232;
   padding: 1rem;
   color: #ffffff;
+  @include tabletscreen {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   @include computerscreen {
     padding-left: 10rem;
     padding-right: 10rem;

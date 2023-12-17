@@ -111,6 +111,12 @@ body button {
   padding: 1rem;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .footer {
     padding-left: 10rem;
@@ -205,13 +211,11 @@ header {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  /*#################################### TOP BAR ####################################*/
 }
 
 .topbar {
   display: flex;
   flex-direction: column;
-  /*#################################### NAV ####################################*/
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .topbar {
@@ -273,7 +277,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /*#################################### NAV LINKS ####################################*/
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .topbar__nav {
