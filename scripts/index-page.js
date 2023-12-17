@@ -5,7 +5,7 @@ const bandsiteAPI = new bandSiteAPI();
 const getData = async () => {
   console.log(bandSiteAPI);
   let userComments = await bandsiteAPI.getComments();
-
+  userComments.sort((a, b) => b.timestamp - a.timestamp);
   loadComments(userComments);
 };
 
